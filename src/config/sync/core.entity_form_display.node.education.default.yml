@@ -1,24 +1,20 @@
-uuid: b4ced0ee-c3e7-4407-8ffb-1ac5f80f27b5
+uuid: 1440622c-437c-4083-9fcd-a4b126bcae76
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
-    - field.field.node.project.field_link_to_project
-    - field.field.node.project.field_link_to_repository
-    - field.field.node.project.field_related_to_work_experience
-    - field.field.node.project.field_roles_in_the_project
-    - field.field.node.project.field_used_skills
-    - field.field.node.project.field_year
-    - node.type.project
+    - field.field.node.education.body
+    - field.field.node.education.field_courses
+    - field.field.node.education.field_school
+    - node.type.education
   module:
-    - link
+    - paragraphs
     - path
     - scheduler
     - text
-id: node.project.default
+id: node.education.default
 targetEntityType: node
-bundle: project
+bundle: education
 mode: default
 content:
   body:
@@ -36,55 +32,29 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_link_to_project:
-    weight: 9
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_link_to_repository:
+  field_courses:
+    type: entity_reference_paragraphs
     weight: 10
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: link_default
     region: content
-  field_related_to_work_experience:
-    weight: 11
+  field_school:
+    type: entity_reference_paragraphs
+    weight: 9
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_roles_in_the_project:
-    weight: 26
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_used_skills:
-    weight: 12
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_year:
-    weight: 27
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
     region: content
   path:
     type: path

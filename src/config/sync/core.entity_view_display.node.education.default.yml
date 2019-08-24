@@ -1,0 +1,49 @@
+uuid: 05bf2632-dd7a-4844-8d85-f486bde3af0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.education.body
+    - field.field.node.education.field_courses
+    - field.field.node.education.field_school
+    - node.type.education
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.education.default
+targetEntityType: node
+bundle: education
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_courses:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_school:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

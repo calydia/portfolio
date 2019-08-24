@@ -1,0 +1,19 @@
+uuid: aea5df58-ab3b-4be5-9522-582a3532f552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_educator
+    - paragraphs.paragraphs_type.course
+id: paragraph.course.field_educator
+field_name: field_educator
+entity_type: paragraph
+bundle: course
+label: Educator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

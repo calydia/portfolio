@@ -1,0 +1,9 @@
+uuid: af2c45b1-ed06-44f8-bf3b-3f5e5bdbbadc
+langcode: en
+status: true
+dependencies: {  }
+id: school
+label: School
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

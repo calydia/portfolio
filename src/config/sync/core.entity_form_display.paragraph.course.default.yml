@@ -1,0 +1,51 @@
+uuid: 6a650f64-a993-427a-972b-73d08e4f13bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.course.field_educator
+    - field.field.paragraph.course.field_month_year
+    - field.field.paragraph.course.field_related_to_work_experience
+    - field.field.paragraph.course.field_title
+    - paragraphs.paragraphs_type.course
+id: paragraph.course.default
+targetEntityType: paragraph
+bundle: course
+mode: default
+content:
+  field_educator:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_month_year:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_related_to_work_experience:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

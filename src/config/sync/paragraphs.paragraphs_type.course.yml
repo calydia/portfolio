@@ -1,0 +1,9 @@
+uuid: 27455344-b003-447a-80ea-55fe0dd5e4e9
+langcode: en
+status: true
+dependencies: {  }
+id: course
+label: Course
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

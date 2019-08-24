@@ -1,0 +1,28 @@
+uuid: 2239c8ce-7ca1-48da-9ba3-e8fc89b95bb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_to_work_experience
+    - node.type.project
+    - node.type.work_experience
+id: node.project.field_related_to_work_experience
+field_name: field_related_to_work_experience
+entity_type: node
+bundle: project
+label: 'Related to work experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      work_experience: work_experience
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

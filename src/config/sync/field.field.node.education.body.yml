@@ -1,0 +1,22 @@
+uuid: 2796d422-4692-458a-92c6-e9c1a56db5f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.education
+  module:
+    - text
+id: node.education.body
+field_name: body
+entity_type: node
+bundle: education
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

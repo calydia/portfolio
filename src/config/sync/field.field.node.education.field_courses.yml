@@ -1,0 +1,34 @@
+uuid: 929c1464-dd4a-40cf-911f-fd3515f14e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_courses
+    - node.type.education
+    - paragraphs.paragraphs_type.course
+  module:
+    - entity_reference_revisions
+id: node.education.field_courses
+field_name: field_courses
+entity_type: node
+bundle: education
+label: Courses
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      course: course
+    target_bundles_drag_drop:
+      course:
+        enabled: true
+        weight: 3
+      school:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,63 @@
+uuid: 99eec3a7-676e-446f-8055-737e9cab2551
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.work_experience.body
+    - field.field.node.work_experience.field_company
+    - field.field.node.work_experience.field_end_date
+    - field.field.node.work_experience.field_start_date
+    - node.type.work_experience
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.work_experience.default
+targetEntityType: node
+bundle: work_experience
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_company:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_end_date:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_start_date:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

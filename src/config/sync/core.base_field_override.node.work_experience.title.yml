@@ -1,0 +1,18 @@
+uuid: ec5ff7c7-19f8-4cd1-9d74-42f718b40003
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.work_experience
+id: node.work_experience.title
+field_name: title
+entity_type: node
+bundle: work_experience
+label: 'Job Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

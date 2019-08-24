@@ -1,29 +1,27 @@
-uuid: b4ced0ee-c3e7-4407-8ffb-1ac5f80f27b5
+uuid: 85c2734f-21ea-4721-9b34-a382868b797f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.project.body
-    - field.field.node.project.field_link_to_project
-    - field.field.node.project.field_link_to_repository
-    - field.field.node.project.field_related_to_work_experience
-    - field.field.node.project.field_roles_in_the_project
-    - field.field.node.project.field_used_skills
-    - field.field.node.project.field_year
-    - node.type.project
+    - field.field.node.work_experience.body
+    - field.field.node.work_experience.field_company
+    - field.field.node.work_experience.field_end_date
+    - field.field.node.work_experience.field_start_date
+    - node.type.work_experience
   module:
+    - datetime
     - link
     - path
     - scheduler
     - text
-id: node.project.default
+id: node.work_experience.default
 targetEntityType: node
-bundle: project
+bundle: work_experience
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 121
     settings:
       rows: 9
       summary_rows: 3
@@ -32,74 +30,51 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_link_to_project:
-    weight: 9
+  field_company:
+    weight: 122
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
-  field_link_to_repository:
-    weight: 10
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
+  field_end_date:
+    weight: 124
+    settings: {  }
     third_party_settings: {  }
-    type: link_default
+    type: datetime_default
     region: content
-  field_related_to_work_experience:
-    weight: 11
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+  field_start_date:
+    weight: 123
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_roles_in_the_project:
-    weight: 26
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_used_skills:
-    weight: 12
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_year:
-    weight: 27
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
+    type: datetime_default
     region: content
   path:
     type: path
-    weight: 4
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 5
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 3
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -107,12 +82,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -120,7 +102,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -129,10 +111,8 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 6
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  promote: true
-  sticky: true
+hidden: {  }

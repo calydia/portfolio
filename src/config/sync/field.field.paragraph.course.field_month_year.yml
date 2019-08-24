@@ -1,0 +1,19 @@
+uuid: 3c2ed5c2-45c1-4bf4-89a9-8da3e16c45a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_month_year
+    - paragraphs.paragraphs_type.course
+id: paragraph.course.field_month_year
+field_name: field_month_year
+entity_type: paragraph
+bundle: course
+label: Month/Year
+description: 'Month/Year of the course'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

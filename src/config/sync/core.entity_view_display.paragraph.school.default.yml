@@ -1,0 +1,39 @@
+uuid: 8a76c2a9-9a81-4bd5-bb4b-c546bc9afdaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.school.field_duration
+    - field.field.paragraph.school.field_school_name
+    - field.field.paragraph.school.field_title
+    - paragraphs.paragraphs_type.school
+id: paragraph.school.default
+targetEntityType: paragraph
+bundle: school
+mode: default
+content:
+  field_duration:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_school_name:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
