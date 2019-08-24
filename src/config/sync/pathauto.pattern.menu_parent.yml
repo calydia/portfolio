@@ -1,0 +1,14 @@
+uuid: 8eb6cd47-3c7f-4717-84c6-e7a932ee7d05
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: menu_parent
+label: 'Menu parent'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parent]/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -10
+relationships: {  }
