@@ -24,6 +24,7 @@
         "drupal/backup_migrate": "^4.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
+        "drupal/paragraphs": "^1.9",
         "drupal/pathauto": "^1.4",
         "drupal/scheduler": "^1.1",
         "drupal/sitemap": "^1.5",
