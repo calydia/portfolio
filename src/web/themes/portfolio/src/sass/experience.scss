@@ -1,0 +1,41 @@
+// Experience listing
+
+.block-views-blockwork-experience-block-work-experience {
+  .views-row {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    position: relative;
+  }
+  //odd borders
+  .views-row:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+
+    &:before {
+      left: 100%;
+      margin-left: -20px;
+    }
+  }
+  //even borders
+  .views-row:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+
+    &:before {
+      right: 100%;
+      margin-right: -20px;
+    }
+  }
+  //handle first and last
+  .views-row:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
