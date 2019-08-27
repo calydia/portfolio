@@ -4,9 +4,9 @@ var gulp = require("gulp"),
   eslint = require("gulp-eslint"),
   sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
-  sourcemaps = require("gulp-sourcemaps"),
   imagemin = require("gulp-imagemin"),
-  pngquant = require("imagemin-pngquant");
+  pngquant = require("imagemin-pngquant"),
+  concat = require("gulp-concat");
 
 gulp.task("imagemin", function() {
   return gulp
@@ -24,10 +24,9 @@ gulp.task("imagemin", function() {
 gulp.task("sass", function() {
   return gulp
     .src("./src/sass/**/*.scss")
-    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(autoprefixer("last 2 version"))
-    .pipe(sourcemaps.write("./"))
+    .pipe(concat("styles.css"))
     .pipe(gulp.dest("./css"));
 });
 

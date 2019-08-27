@@ -9,6 +9,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.1.0",
