@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Add current page title to breadcrumb
+ */
+function portfolio_preprocess_breadcrumb(&$variables) {
+  if (($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
+    $variables['breadcrumb'][] = array(
+      'text' => $node->getTitle(),
+    );
+  }
+}
