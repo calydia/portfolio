@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.project.body
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
+    - field.field.node.project.field_project_image
     - field.field.node.project.field_related_to_work_experience
     - field.field.node.project.field_roles_in_the_project
     - field.field.node.project.field_technologies
@@ -13,6 +14,7 @@ dependencies:
     - node.type.project
   module:
     - link
+    - media_library
     - path
     - scheduler
     - text
@@ -51,6 +53,13 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_project_image:
+    type: media_library_widget
+    weight: 29
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_related_to_work_experience:
     weight: 11

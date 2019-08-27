@@ -1,4 +1,4 @@
-uuid: 10273426-e326-4574-9343-dc65c06a0a88
+uuid: f977e4b2-809b-4fca-9c91-f780cfd459ff
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
+    - portfolio
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: bartik_main_menu
-theme: bartik
+id: portfolio_main_menu
+theme: portfolio
 region: primary_menu
 weight: 0
 provider: null

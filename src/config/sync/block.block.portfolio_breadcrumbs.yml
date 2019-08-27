@@ -1,15 +1,15 @@
-uuid: 7866fa51-3e7d-47a7-b869-02a827f3c358
+uuid: cdaa8625-42c7-48d4-be07-7d20be596f89
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - portfolio
 _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: bartik_breadcrumbs
-theme: bartik
+id: portfolio_breadcrumbs
+theme: portfolio
 region: breadcrumb
 weight: 0
 provider: null

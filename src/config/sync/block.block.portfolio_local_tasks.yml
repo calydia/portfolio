@@ -1,13 +1,13 @@
-uuid: 8f2f188e-392b-4b00-9b85-335323aac05b
+uuid: 64838ca3-ad00-471a-ad78-657db298c450
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - portfolio
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: bartik_local_tasks
-theme: bartik
+id: portfolio_local_tasks
+theme: portfolio
 region: content
 weight: -40
 provider: null

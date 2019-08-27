@@ -1,15 +1,15 @@
-uuid: 7f4a4331-5767-4ebc-b8c3-e95112b0b99d
+uuid: aa3d0b42-d325-4de8-9118-d819b5249948
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - portfolio
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
+id: portfolio_messages
+theme: portfolio
 region: highlighted
 weight: 0
 provider: null

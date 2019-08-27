@@ -1,15 +1,15 @@
-uuid: 900eaf01-c79e-4281-8325-b40c9c1d3f7e
+uuid: 7a77352e-48ae-42f6-9c19-7688ddbaa553
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - bartik
+    - portfolio
 _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
-id: bartik_help
-theme: bartik
+id: portfolio_help
+theme: portfolio
 region: content
 weight: -30
 provider: null

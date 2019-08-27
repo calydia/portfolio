@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.project.body
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
+    - field.field.node.project.field_project_image
     - field.field.node.project.field_related_to_work_experience
     - field.field.node.project.field_roles_in_the_project
     - field.field.node.project.field_technologies
@@ -23,13 +24,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_link_to_project:
-    weight: 102
-    label: above
+    weight: 8
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -40,7 +41,7 @@ content:
     type: link
     region: content
   field_link_to_repository:
-    weight: 103
+    weight: 7
     label: above
     settings:
       trim_length: 80
@@ -51,8 +52,17 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_project_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   field_related_to_work_experience:
-    weight: 104
+    weight: 4
     label: above
     settings:
       link: true
@@ -60,23 +70,23 @@ content:
     type: entity_reference_label
     region: content
   field_roles_in_the_project:
-    weight: 106
+    weight: 5
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_technologies:
-    weight: 108
+    weight: 6
     label: above
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_year:
-    weight: 107
+    weight: 2
     label: above
     settings:
       thousand_separator: ''
@@ -85,8 +95,8 @@ content:
     type: number_integer
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
