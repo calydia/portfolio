@@ -1,0 +1,10 @@
+.header-main-menu {
+  .menu {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu-item {
+    margin: 5px;
+    padding: 5px;
+  }
+}

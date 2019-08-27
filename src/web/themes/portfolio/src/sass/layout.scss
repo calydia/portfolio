@@ -1,0 +1,13 @@
+.main-header {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.layout-content {
+  margin: 0 auto;
+  width: 80%;
+  @media only screen and (min-width: 1250px) {
+    max-width: 1200px;
+    width: 100%;
+  }
+}

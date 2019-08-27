@@ -1,0 +1,13 @@
+.field--name-field-school>.field__item{background:#eaeaea;margin:10px 0;padding:20px}.field--name-field-courses .field__items>.field__item{background:#eaeaea;margin:10px 0;padding:20px}.field--name-field-school .field--name-field-title,.field--name-field-courses .field--name-field-title{font-size:18px;font-size:1.125rem;font-weight:bold}
+
+.main-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}.layout-content{margin:0 auto;width:80%}@media only screen and (min-width: 1250px){.layout-content{max-width:1200px;width:100%}}
+
+
+.header-main-menu .menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}.header-main-menu .menu-item{margin:5px;padding:5px}
+
+body{background:white}
+
+.block-local-tasks-block{position:fixed;right:0;top:100px}.block-local-tasks-block ul.primary{background:rgba(0,0,0,0.3);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;padding:10px}.block-local-tasks-block a:hover{background:white}.block-local-tasks-block a.is-active{background:#eee}
+
+body{font-family:"Quicksand", sans-serif}
+

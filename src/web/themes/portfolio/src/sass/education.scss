@@ -1,0 +1,28 @@
+@import "mixins";
+@import "variables";
+
+.field--name-field-school {
+  > .field__item {
+    background: #eaeaea;
+    margin: 10px 0;
+    padding: 20px;
+  }
+}
+
+.field--name-field-courses {
+  .field__items {
+    > .field__item {
+      background: #eaeaea;
+      margin: 10px 0;
+      padding: 20px;
+    }
+  }
+}
+
+.field--name-field-school,
+.field--name-field-courses {
+  .field--name-field-title {
+    @include fontSize(18px);
+    font-weight: bold;
+  }
+}
