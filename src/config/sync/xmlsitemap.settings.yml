@@ -5,7 +5,7 @@ chunk_size: auto
 batch_limit: 100
 path: xmlsitemap
 frontpage_priority: !!float 1
-frontpage_changefreq: 86400
+frontpage_changefreq: 2419200
 lastmod_format: 'Y-m-d\TH:i\Z'
 gz: false
 clean_url: 0

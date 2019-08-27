@@ -1,0 +1,8 @@
+uuid: cbae93c0-9562-4279-8a2f-0a18279ddb4c
+langcode: en
+status: true
+dependencies: {  }
+name: Technologies
+vid: technologies
+description: 'Technologies used in projects'
+weight: 0

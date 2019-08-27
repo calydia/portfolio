@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.project.field_link_to_repository
     - field.field.node.project.field_related_to_work_experience
     - field.field.node.project.field_roles_in_the_project
-    - field.field.node.project.field_used_skills
+    - field.field.node.project.field_technologies
     - field.field.node.project.field_year
     - node.type.project
   module:
@@ -67,8 +67,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_used_skills:
-    weight: 105
+  field_technologies:
+    weight: 108
     label: above
     settings:
       link: true
