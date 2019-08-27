@@ -21,13 +21,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   field_company:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -38,26 +38,26 @@ content:
     type: link
     region: content
   field_end_date:
-    weight: 104
-    label: above
+    weight: 3
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: html_month
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_start_date:
-    weight: 103
-    label: above
+    weight: 2
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: html_month
     third_party_settings: {  }
     type: datetime_default
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
