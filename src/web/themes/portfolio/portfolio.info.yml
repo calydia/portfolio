@@ -11,10 +11,7 @@ libraries:
 regions:
   header: Header
   primary_menu: Primary menu
-  secondary_menu: Secondary menu
   highlighted: Highlighted
   breadcrumb: Breadcrumb
   content: Content
-  sidebar_first: First sidebar
-  sidebar_second: Second sidebar
   footer: Footer
