@@ -1,0 +1,83 @@
+.github-link {
+  background: url("../images/github.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  display: block;
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+.gitlab-link {
+  background: url("../images/gitlab.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+  display: block;
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+
+.linkedin-link {
+  background: url("../images/linkedin.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  display: block;
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+
+.twitter-link {
+  background: url("../images/twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  display: block;
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+
+.instagram-link {
+  background: url("../images/instagram.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  display: block;
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+
+.devto-link {
+  background: url("../images/dev.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  display: block;
+  height: 30px;
+  text-indent: -9999px;
+  width: 30px;
+}
+
+.footer-some-links {
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  a {
+    margin: 5px;
+  }
+}
+
+.some-container {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  a {
+    margin: 5px;
+  }
+}
