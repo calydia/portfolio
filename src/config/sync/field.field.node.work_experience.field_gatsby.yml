@@ -1,0 +1,19 @@
+uuid: a94acc71-a044-4085-acf6-27a243ee6c42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gatsby
+    - node.type.work_experience
+id: node.work_experience.field_gatsby
+field_name: field_gatsby
+entity_type: node
+bundle: work_experience
+label: 'Gatsby content'
+description: 'Content for the Gatsby site work experience.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -5,8 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.work_experience.body
+    - field.field.node.work_experience.field_company
+    - field.field.node.work_experience.field_end_date
+    - field.field.node.work_experience.field_gatsby
+    - field.field.node.work_experience.field_start_date
     - node.type.work_experience
   module:
+    - datetime
+    - link
     - text
     - user
 id: node.work_experience.teaser
@@ -15,16 +21,43 @@ bundle: work_experience
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 3
+    region: content
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+  field_company:
+    type: link
+    weight: 2
     region: content
-  links:
-    weight: 100
-    settings: {  }
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
+  field_end_date:
+    type: datetime_default
+    weight: 1
     region: content
-hidden: {  }
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: year_and_month
+    third_party_settings: {  }
+  field_start_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: year_and_month
+    third_party_settings: {  }
+hidden:
+  field_gatsby: true
+  links: true

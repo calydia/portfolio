@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.project.body
+    - field.field.node.project.field_link_to_project
+    - field.field.node.project.field_link_to_repository
+    - field.field.node.project.field_project_image
+    - field.field.node.project.field_related_to_work_experience
+    - field.field.node.project.field_roles_in_the_project
+    - field.field.node.project.field_technologies
+    - field.field.node.project.field_year
     - node.type.project
   module:
     - text
@@ -17,14 +24,17 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 0
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_link_to_project: true
+  field_link_to_repository: true
+  field_project_image: true
+  field_related_to_work_experience: true
+  field_roles_in_the_project: true
+  field_technologies: true
+  field_year: true
+  links: true

@@ -12,7 +12,7 @@ field_name: body
 entity_type: node
 bundle: work_experience
 label: Body
-description: ''
+description: 'Content for the Drupal version.'
 required: false
 translatable: true
 default_value: {  }

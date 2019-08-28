@@ -1,0 +1,29 @@
+uuid: cc464c5b-776e-4c1a-a1b1-dcf2d149f7d1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:196b048c-0d63-4a70-a44b-70268243d900'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - portfolio
+third_party_settings:
+  block_class:
+    classes: footer-some-links
+id: somelinks
+theme: portfolio
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:196b048c-0d63-4a70-a44b-70268243d900'
+settings:
+  id: 'block_content:196b048c-0d63-4a70-a44b-70268243d900'
+  label: 'SoMe links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.work_experience.body
     - field.field.node.work_experience.field_company
     - field.field.node.work_experience.field_end_date
+    - field.field.node.work_experience.field_gatsby
     - field.field.node.work_experience.field_start_date
     - node.type.work_experience
   module:
@@ -21,12 +22,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_company:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       trim_length: 80
@@ -38,15 +39,6 @@ content:
     type: link
     region: content
   field_end_date:
-    weight: 3
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: html_month
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_start_date:
     weight: 2
     label: hidden
     settings:
@@ -55,9 +47,21 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  links:
-    weight: 0
-    region: content
+  field_gatsby:
+    weight: 4
+    label: above
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+    type: basic_string
+    region: content
+  field_start_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_month
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  links: true
