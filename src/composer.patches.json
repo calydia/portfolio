@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/linkit": {
+      "Linkit does not autocomplete when crosslinking": "applied_patches/linkit/linkit_autocomplete_not_loaded-2973181-4.patch"
+    }
+  }
+}

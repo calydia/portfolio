@@ -104,6 +104,8 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
-        }
+        },
+        "enable-patching": true,
+        "patches-file": "composer.patches.json"
     }
 }

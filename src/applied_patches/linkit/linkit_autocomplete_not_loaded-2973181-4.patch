@@ -1,0 +1,17 @@
+diff --git a/js/autocomplete.js b/js/linkit.autocomplete.js
+similarity index 100%
+rename from js/autocomplete.js
+rename to js/linkit.autocomplete.js
+diff --git a/linkit.libraries.yml b/linkit.libraries.yml
+index 6f3bce3..9e00dd3 100644
+--- a/linkit.libraries.yml
++++ b/linkit.libraries.yml
+@@ -16,7 +16,7 @@ linkit.base:
+ linkit.autocomplete:
+   version: VERSION
+   js:
+-    js/autocomplete.js: {}
++    js/linkit.autocomplete.js: {}
+   css:
+     component:
+       css/linkit.autocomplete.css: {}
