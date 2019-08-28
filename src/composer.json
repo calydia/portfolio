@@ -27,6 +27,8 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
         "drupal/devel": "^2.1",
+        "drupal/editor_advanced_link": "^1.4",
+        "drupal/linkit": "^5.0",
         "drupal/paragraphs": "^1.9",
         "drupal/pathauto": "^1.4",
         "drupal/scheduler": "^1.1",
@@ -54,7 +56,9 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "pre-install-cmd": [
@@ -76,12 +80,24 @@
             "drupal/core": "-p2"
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
             "initial": {
