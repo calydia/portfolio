@@ -1,0 +1,18 @@
+@import "mixins";
+@import "variables";
+
+.site-name {
+  margin: 10px 0;
+  @media only screen and (max-width: 1249px) {
+    text-align: center;
+  }
+  a {
+    @include fontSize(22px);
+    color: black;
+    font-family: "Rock Salt", cursive;
+    text-decoration: none;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}

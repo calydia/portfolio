@@ -1,22 +1,22 @@
+.some-icon {
+  display: block;
+  height: 45px;
+  text-indent: -9999px;
+  transition: all 0.2s ease-in-out;
+  width: 45px;
+}
+
 .github-link {
   background: url("../images/github.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  display: block;
-  height: 30px;
-  text-indent: -9999px;
-  width: 30px;
 }
 .gitlab-link {
   background: url("../images/gitlab.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 45px 45px;
-  display: block;
-  height: 30px;
-  text-indent: -9999px;
-  width: 30px;
 }
 
 .linkedin-link {
@@ -24,10 +24,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  display: block;
-  height: 30px;
-  text-indent: -9999px;
-  width: 30px;
 }
 
 .twitter-link {
@@ -35,10 +31,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  display: block;
-  height: 30px;
-  text-indent: -9999px;
-  width: 30px;
 }
 
 .instagram-link {
@@ -46,10 +38,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  display: block;
-  height: 30px;
-  text-indent: -9999px;
-  width: 30px;
 }
 
 .devto-link {
@@ -57,27 +45,46 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  display: block;
-  height: 30px;
-  text-indent: -9999px;
-  width: 30px;
 }
 
 .footer-some-links {
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  a {
-    margin: 5px;
+  .field--name-body {
+    ul {
+      display: flex;
+      list-style: none;
+      margin-left: -5px;
+      padding-left: 0;
+    }
+    a {
+      margin: 5px;
+    }
+    li {
+      background: white;
+      border-radius: 45px;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s ease;
+      }
+    }
   }
 }
 
 .some-container {
   display: flex;
   list-style: none;
+  margin-left: -5px;
   padding-left: 0;
   a {
     margin: 5px;
+  }
+  li {
+    background: white;
+    border-radius: 45px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease;
+    }
   }
 }
