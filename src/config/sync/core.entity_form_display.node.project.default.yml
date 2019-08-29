@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
     - field.field.node.project.field_project_image
+    - field.field.node.project.field_project_image_listing
     - field.field.node.project.field_related_to_work_experience
     - field.field.node.project.field_roles_in_the_project
     - field.field.node.project.field_technologies
@@ -57,6 +58,13 @@ content:
   field_project_image:
     type: media_library_widget
     weight: 29
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_project_image_listing:
+    type: media_library_widget
+    weight: 30
     settings:
       media_types: {  }
     third_party_settings: {  }

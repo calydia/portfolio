@@ -1,17 +1,17 @@
-uuid: 4c99a68f-655d-4c04-b2ae-e360e45c9074
+uuid: e567350d-a78b-490b-8b1e-38f701fa1768
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_project_image
+    - field.storage.node.field_project_image_listing
     - media.type.image
     - node.type.project
-id: node.project.field_project_image
-field_name: field_project_image
+id: node.project.field_project_image_listing
+field_name: field_project_image_listing
 entity_type: node
 bundle: project
-label: 'Project images'
-description: ''
+label: 'Project listing image'
+description: 'Listing image for the project.'
 required: false
 translatable: false
 default_value: {  }

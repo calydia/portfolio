@@ -1,0 +1,37 @@
+uuid: 1debfbbd-ee7b-4f57-a395-fb23a2eef175
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.project_image_listing
+    - field.field.media.image.field_media_image
+    - image.style.project_listing_image
+    - media.type.image
+  module:
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: jOwnt_yq6AKAfqU6f0xKnxEkFQ2eTPJWxrk3WMLbL68
+id: media.image.project_image_listing
+targetEntityType: media
+bundle: image
+mode: project_image_listing
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      image_style: project_listing_image
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

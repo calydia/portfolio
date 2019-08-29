@@ -1,0 +1,15 @@
+uuid: f0d89be3-a687-4fc7-9f2e-d4980320e875
+langcode: en
+status: true
+dependencies: {  }
+name: project_listing_image
+label: 'Project listing image'
+effects:
+  672a8204-4f5d-4182-9444-e61b8cc765e7:
+    uuid: 672a8204-4f5d-4182-9444-e61b8cc765e7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 260
+      anchor: center-center

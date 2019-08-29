@@ -1,0 +1,10 @@
+uuid: 560b0e62-1c67-4bf3-af22-15a5910ed523
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.project_image_listing
+label: 'Project image - listing'
+targetEntityType: media
+cache: true

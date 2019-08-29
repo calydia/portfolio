@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
     - field.field.node.project.field_project_image
+    - field.field.node.project.field_project_image_listing
     - field.field.node.project.field_related_to_work_experience
     - field.field.node.project.field_roles_in_the_project
     - field.field.node.project.field_technologies
@@ -22,13 +23,22 @@ bundle: project
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 0
+    weight: 1
+    region: content
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+  field_project_image_listing:
+    type: entity_reference_entity_view
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      view_mode: project_image_listing
+      link: false
+    third_party_settings: {  }
 hidden:
   field_link_to_project: true
   field_link_to_repository: true

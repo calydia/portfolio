@@ -1,0 +1,10 @@
+uuid: fa16a09f-df9d-4be4-9c2a-4094b32e70c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.project_image
+label: 'Project image'
+targetEntityType: media
+cache: true

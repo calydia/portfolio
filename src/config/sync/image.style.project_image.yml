@@ -1,0 +1,15 @@
+uuid: 9eb54ab6-a60e-4c12-936c-8ad55b756148
+langcode: en
+status: true
+dependencies: {  }
+name: project_image
+label: 'Project image'
+effects:
+  580d516f-7f80-4aec-ac2a-146d8ce64641:
+    uuid: 580d516f-7f80-4aec-ac2a-146d8ce64641
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 200
+      height: 149
+      anchor: center-center
