@@ -1,14 +1,30 @@
 base:
+  version: VERSION
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
   css:
     theme:
       css/styles.css: {}
   js:
     js/portfolio.js: {}
-  dependencies:
-    - core/jquery
 
 fonts:
+  version: VERSION
   css:
     theme:
       ? //fonts.googleapis.com/css?family=Rock+Salt|Quicksand:400,500,700&display=swap
       : { type: external, minified: true }
+
+lity:
+  version: 2.4.0
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+  js:
+    libraries/lity/dist/lity.js: { scope: footer }
+  css:
+    theme:
+      libraries/lity/dist/lity.css: {}
