@@ -12,8 +12,15 @@ h3 {
 
 a {
   color: $secondary;
+  font-weight: bold;
   text-decoration: none;
   &:hover {
     color: $accent;
+  }
+}
+
+header {
+  a {
+    font-weight: normal;
   }
 }
