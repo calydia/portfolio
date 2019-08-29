@@ -3,7 +3,7 @@
 
 .field--name-field-school {
   > .field__item {
-    background: #eaeaea;
+    background: $neutral;
     margin: 10px 0;
     padding: 20px;
   }
@@ -16,7 +16,7 @@
   }
   .field__items {
     > .field__item {
-      background: #eaeaea;
+      background: $neutral;
       margin: 10px 0;
       padding: 20px;
     }

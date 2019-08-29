@@ -65,3 +65,10 @@ footer {
     }
   }
 }
+
+// Add more margin to the front page
+.path-frontpage {
+  .region-content {
+    margin-top: 3em;
+  }
+}
