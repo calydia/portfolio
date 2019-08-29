@@ -1,0 +1,1 @@
+jQuery,Drupal.behaviors.portfolio={attach:function(o,a){}};
