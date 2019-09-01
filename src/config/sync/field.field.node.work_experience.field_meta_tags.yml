@@ -1,0 +1,21 @@
+uuid: e1222227-0c61-43e5-ba6b-07fa08782bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.work_experience
+  module:
+    - metatag
+id: node.work_experience.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: work_experience
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

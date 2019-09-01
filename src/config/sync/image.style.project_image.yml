@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: project_image
-label: 'Project image'
+label: 'Project image (200x149)'
 effects:
   580d516f-7f80-4aec-ac2a-146d8ce64641:
     uuid: 580d516f-7f80-4aec-ac2a-146d8ce64641

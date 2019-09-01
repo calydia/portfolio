@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: project_listing_image
-label: 'Project listing image'
+label: 'Project listing image (350x260)'
 effects:
   672a8204-4f5d-4182-9444-e61b8cc765e7:
     uuid: 672a8204-4f5d-4182-9444-e61b8cc765e7

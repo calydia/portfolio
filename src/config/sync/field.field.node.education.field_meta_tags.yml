@@ -1,0 +1,21 @@
+uuid: 74b4f33f-532d-4896-86cf-31c768e0d780
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.education
+  module:
+    - metatag
+id: node.education.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: education
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
