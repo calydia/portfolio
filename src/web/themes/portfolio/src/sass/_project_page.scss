@@ -1,0 +1,52 @@
+@import "variables";
+
+// Project page
+.field--name-field-roles-in-the-project,
+.field--name-field-technologies,
+.field--name-field-link-to-repository {
+  margin-top: 1em;
+}
+.field--name-field-project-image {
+  background-color: $neutral;
+  margin-top: 2em;
+  padding: 1em;
+  .field__label {
+    padding: 0.5em 1em;
+  }
+  > .field__items {
+    display: flex;
+    flex-flow: row wrap;
+    > .field__item {
+      cursor: pointer;
+      margin: 1em 1em;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  a {
+    border: 3px solid transparent;
+    display: block;
+    &:hover {
+      border: 3px solid $secondary;
+    }
+  }
+  img {
+    display: block;
+  }
+}
+
+.field--name-field-link-to-project a {
+  background: $accent;
+  border-radius: 2em;
+  color: white;
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  &:hover {
+    color: white;
+    background-color: $secondary;
+    transition: background-color 0.3s ease;
+  }
+}
