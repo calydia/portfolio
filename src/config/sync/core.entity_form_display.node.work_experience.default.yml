@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.work_experience.body
     - field.field.node.work_experience.field_company
     - field.field.node.work_experience.field_end_date
-    - field.field.node.work_experience.field_gatsby
     - field.field.node.work_experience.field_meta_tags
     - field.field.node.work_experience.field_start_date
     - node.type.work_experience
@@ -50,14 +49,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_gatsby:
-    weight: 125
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
     region: content
   field_meta_tags:
     weight: 126
