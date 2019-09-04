@@ -8,10 +8,10 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
-  description: '[node:summary]'
   title: '[current-page:title] | [site:name]'
   theme_color: '#9edcff'
   og_description: '[node:summary]'
+  og_image_alt: 'Abyssinian cat, Osiris'
   og_image_height: '630'
   og_image_width: '1200'
   og_site_name: '[site:name]'

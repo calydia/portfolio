@@ -1,0 +1,9 @@
+uuid: e471a607-b16a-4b7b-9ac6-f03eb92d69d0
+langcode: en
+status: true
+dependencies: {  }
+id: node__project
+label: 'Content: Project'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'

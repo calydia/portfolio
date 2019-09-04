@@ -1,0 +1,9 @@
+uuid: a91a9fbc-9ac0-455b-b7b1-2c77216b16ed
+langcode: en
+status: true
+dependencies: {  }
+id: node__work_experience
+label: 'Content: Work experience'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'

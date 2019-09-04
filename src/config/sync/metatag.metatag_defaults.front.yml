@@ -8,4 +8,9 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  description: '[node:body]'
   shortlink: '[site:url]'
+  title: '[current-page:title] | [site:name]'
+  og_image_alt: 'Abyssinian cat, Osiris'
+  og_image_height: '630'
+  og_image_width: '1200'
