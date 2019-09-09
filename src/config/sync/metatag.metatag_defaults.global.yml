@@ -13,6 +13,7 @@ tags:
   og_description: '[node:summary]'
   og_image_alt: 'Abyssinian cat, Osiris'
   og_image_height: '630'
+  og_image_url: 'https://drupal.sanna.ninja/sites/default/files/images/osiris.jpg'
   og_image_width: '1200'
   og_site_name: '[site:name]'
   og_title: '[current-page:title]'
