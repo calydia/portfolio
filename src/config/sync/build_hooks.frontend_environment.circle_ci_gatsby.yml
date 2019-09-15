@@ -1,0 +1,19 @@
+uuid: 9a9672c8-fa82-46bf-94dd-c4e4422a55b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - build_hooks_circleci
+id: circle_ci_gatsby
+label: 'Circle CI - Gatsby'
+weight: '0'
+provider: null
+plugin: circleci
+settings:
+  id: circleci
+  label: null
+  provider: build_hooks_circleci
+  project: strathos/circleci-test
+  branch: master
+url: 'https://sanna.ninja'
+deployment_strategy: entitysave
