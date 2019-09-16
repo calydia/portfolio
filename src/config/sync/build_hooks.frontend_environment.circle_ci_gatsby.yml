@@ -13,7 +13,7 @@ settings:
   id: circleci
   label: null
   provider: build_hooks_circleci
-  project: strathos/circleci-test
+  project: schala/portfolio-gatsby
   branch: master
 url: 'https://sanna.ninja'
 deployment_strategy: entitysave
