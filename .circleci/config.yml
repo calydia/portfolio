@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  deploy:
+    docker:
+      - image: docker:stable
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install dependencies
+          command: |
+            apk add kubernetes --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
+      - run:
+          name: Build image and push
+          command: |
+            kubectl --server=${KUBE_HOST} --token=${KUBE_BEARER_TOKEN} --insecure-skip-tls-verify -n ${KUBE_NAMESPACE} rollout restart deployment ${KUBE_DEPLOYMENT_NAME}
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: master
