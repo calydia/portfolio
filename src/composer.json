@@ -24,6 +24,7 @@
         "drupal/backup_migrate": "^4.0",
         "drupal/block_class": "^1.0",
         "drupal/build_hooks": "^2.2",
+        "drupal/config_ignore": "^2.1",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
         "drupal/devel": "^2.1",
