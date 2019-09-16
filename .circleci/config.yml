@@ -11,7 +11,7 @@ jobs:
           command: |
             apk add kubernetes --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
       - run:
-          name: Build image and push
+          name: Deploy to Kubernetes
           command: |
             kubectl --server=${KUBE_HOST} --token=${KUBE_BEARER_TOKEN} --insecure-skip-tls-verify -n ${KUBE_NAMESPACE} rollout restart deployment ${KUBE_DEPLOYMENT_NAME}
 
