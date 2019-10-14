@@ -9,7 +9,10 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add kubernetes --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
+            apk add curl
+            curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+            chmod +x ./kubectl
+            sudo mv ./kubectl /usr/local/bin/kubectl
       - run:
           name: Deploy to Kubernetes
           command: |
