@@ -26,7 +26,7 @@
         "drupal/build_hooks": "^2.2",
         "drupal/config_ignore": "^2.1",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.7.0",
+        "drupal/core": "^8.8.0",
         "drupal/devel": "^2.1",
         "drupal/editor_advanced_link": "^1.4",
         "drupal/linkit": "^5.0",
