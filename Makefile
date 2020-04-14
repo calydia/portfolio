@@ -19,12 +19,13 @@ endif
 .PHONY: up
 up:
 	@echo "Starting up containers for $(PROJECT_NAME)..."
-	docker-compose pull
+	docker-compose pull || true
 	docker-compose up -d --remove-orphans
 
-## down	:	Stop containers.
-.PHONY: down
-down: stop
+## down	:	Delete containers.
+down:
+	@echo "Stopping and deleting containers for $(PROJECT_NAME)..."
+	@docker-compose down
 
 ## start	:	Start containers without updating.
 .PHONY: start
@@ -55,21 +56,21 @@ ps:
 ## shell	:	Access `php` container via shell.
 .PHONY: shell
 shell:
-	docker exec -ti -e COLUMNS=$(shell tput cols) -e LINES=$(shell tput lines) $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") sh
+	docker exec -u wodby -ti -e COLUMNS=$(shell tput cols) -e LINES=$(shell tput lines) $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") sh
 
 ## composer	:	Executes `composer` command in a specified `COMPOSER_ROOT` directory (default is `/var/www/html`).
 ##		To use "--flag" arguments include them in quotation marks.
 ##		For example: make composer "update drupal/core --with-dependencies"
 .PHONY: composer
 composer:
-	docker exec $(shell docker ps --filter name='^/$(PROJECT_NAME)_php' --format "{{ .ID }}") composer --working-dir=$(COMPOSER_ROOT) $(filter-out $@,$(MAKECMDGOALS))
+	docker exec -u wodby $(shell docker ps --filter name='^/$(PROJECT_NAME)_php' --format "{{ .ID }}") composer --working-dir=$(COMPOSER_ROOT) $(filter-out $@,$(MAKECMDGOALS))
 
 ## drush	:	Executes `drush` command in a specified `DRUPAL_ROOT` directory (default is `/var/www/html/web`).
 ##		To use "--flag" arguments include them in quotation marks.
 ##		For example: make drush "watchdog:show --type=cron"
 .PHONY: drush
 drush:
-	docker exec $(shell docker ps --filter name='^/$(PROJECT_NAME)_php' --format "{{ .ID }}") drush -r $(DRUPAL_ROOT) $(filter-out $@,$(MAKECMDGOALS))
+	docker exec -u wodby $(shell docker ps --filter name='^/$(PROJECT_NAME)_php' --format "{{ .ID }}") drush -r $(DRUPAL_ROOT) $(filter-out $@,$(MAKECMDGOALS))
 
 ## logs	:	View containers logs.
 ##		You can optinally pass an argument with the service name to limit logs

@@ -15,7 +15,12 @@ services:
       - ./db:/var/lib/mysql # Use bind mount
 
   php:
-    image: wodby/drupal-php:$PHP_TAG
+    #image: wodby/drupal-php:$PHP_TAG
+    build:
+      context: ./dev
+      dockerfile: Dockerfile-php
+      args:
+        PHP_TAG: $PHP_TAG
     container_name: '${PROJECT_NAME}_php'
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
@@ -27,6 +32,8 @@ services:
       DB_DRIVER: $DB_DRIVER
       PHP_FPM_USER: wodby
       PHP_FPM_GROUP: wodby
+      PUID: $PUID
+      PGID: $PGID
       COLUMNS: 80 # Set 80 columns for docker exec -it.
     ## Read instructions at https://wodby.com/stacks/drupal/docs/local/xdebug/
     #      PHP_XDEBUG: 1
@@ -263,16 +270,16 @@ services:
   #      - 'traefik.port=8080'
   #      - 'traefik.frontend.rule=Host:xhprof.${PROJECT_BASE_URL}'
 
-  portainer:
-    image: portainer/portainer
-    container_name: '${PROJECT_NAME}_portainer'
-    command: --no-auth -H unix:///var/run/docker.sock
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - 'traefik.backend=${PROJECT_NAME}_portainer'
-      - 'traefik.port=9000'
-      - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
+  # portainer:
+  #   image: portainer/portainer
+  #   container_name: '${PROJECT_NAME}_portainer'
+  #   command: --no-auth -H unix:///var/run/docker.sock
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   labels:
+  #     - 'traefik.backend=${PROJECT_NAME}_portainer'
+  #     - 'traefik.port=9000'
+  #     - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
 
   traefik:
     image: traefik:maroilles
