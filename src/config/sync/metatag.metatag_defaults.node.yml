@@ -8,6 +8,5 @@ id: node
 label: Content
 tags:
   canonical_url: '[node:url]'
-  content_language: en
-  description: '[node:body]'
   title: '[node:title] | [site:name]'
+  description: '[node:body]'
