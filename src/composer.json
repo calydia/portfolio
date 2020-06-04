@@ -34,7 +34,6 @@
         "drupal/paragraphs": "^1.9",
         "drupal/pathauto": "^1.4",
         "drupal/scheduler": "^1.1",
-        "drupal/sitemap": "^1.5",
         "drupal/upgrade_status": "^2.7",
         "drupal/view_unpublished": "^1.0@alpha",
         "drupal/xmlsitemap": "^1.0@alpha",
