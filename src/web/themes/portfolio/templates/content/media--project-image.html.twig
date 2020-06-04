@@ -8,8 +8,8 @@
     view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-<article{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   <a href="{{ gallery_image_url }}" data-lity aria-label="Open a larger version of the layout" title="Open a larger version of the layout">
     {{ thumbnail }}
   </a>
-</article>
+</div>
