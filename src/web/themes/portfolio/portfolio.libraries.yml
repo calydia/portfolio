@@ -8,6 +8,8 @@ base:
   css:
     theme:
       css/styles.css: {}
+  js:
+    js/portfolio.js: { minified: true }
 
 fonts:
   version: VERSION

@@ -1,1 +1,1 @@
-jQuery,Drupal.behaviors.portfolio={attach:function(o,a){}};
+!function(a){Drupal.behaviors.portfolio={attach:function(t,o){var n=a(".skip-link"),i=a("#main-content");n.click(function(t){t.preventDefault(),a("html, body").animate({scrollTop:i.offset().top},1e3,function(){if((location.hash=i).focus(),i.is(":focus"))return!1;i.attr("tabindex","-1"),i.focus()})})}}}(jQuery);
