@@ -18,18 +18,30 @@
   }
 }
 .region-header {
-  @media only screen and (max-width: 1249px) {
-    margin-top: 10px;
+  @media only screen and (max-width: 719px) {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  @media only screen and (min-width: 720px) and (max-width: 1249px) {
+    margin-top: 0.5em;
   }
 }
 .region-header,
 .region-primary-menu {
-  @media only screen and (max-width: 1249px) {
+  width: 50%;
+  @media only screen and (min-width: 720px) and (max-width: 1249px) {
     justify-self: center;
     width: 100%;
   }
   @media only screen and (min-width: 1250px) {
     align-self: center;
+    width: auto;
+  }
+}
+.region-primary-menu {
+  @media only screen and (max-width: 719px) {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

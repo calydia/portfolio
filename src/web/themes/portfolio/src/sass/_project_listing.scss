@@ -52,4 +52,8 @@
     background-color: $accent;
     transition: background-color 0.3s ease;
   }
+  &:focus {
+    background-color: $accent;
+    border-bottom: none;
+  }
 }

@@ -3,6 +3,9 @@
 
 .site-name {
   margin: 10px 0;
+  @media only screen and (max-width: 719px) {
+    width: 115px;
+  }
   @media only screen and (max-width: 1249px) {
     text-align: center;
   }
