@@ -24,3 +24,7 @@ header {
     font-weight: normal;
   }
 }
+
+a:focus {
+  border-bottom: 5px solid black;
+}

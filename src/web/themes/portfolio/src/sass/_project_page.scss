@@ -29,6 +29,9 @@
     &:hover {
       border: 3px solid $secondary;
     }
+    &:focus {
+      border: 3px solid black;
+    }
   }
   img {
     display: block;
@@ -47,6 +50,12 @@
   &:hover {
     color: white;
     background-color: $secondary;
+    transition: background-color 0.3s ease;
+  }
+  &:focus {
+    color: white;
+    background-color: $secondary;
+    border-bottom: none;
     transition: background-color 0.3s ease;
   }
 }

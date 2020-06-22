@@ -2,7 +2,10 @@
   Drupal.behaviors.portfolio = {
     attach: function (context, settings) {
       var skip = $(".skip-link"),
-        $target = $("#main-content");
+        $target = $("#main-content"),
+        menuToggle = $(".main-menu-toggle"),
+        mobileMenu = $(".main-menu-nav");
+
       skip.click(function (event) {
         event.preventDefault();
         $("html, body").animate(
@@ -19,6 +22,10 @@
             }
           }
         );
+      });
+
+      menuToggle.click(function () {
+        mobileMenu.toggleClass("show");
       });
     },
   };

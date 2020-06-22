@@ -32,4 +32,43 @@
     list-style: none;
     list-style-type: none;
   }
+  @media only screen and (max-width: 719px) {
+    .main-menu-nav {
+      display: none;
+      visibility: hidden;
+    }
+    .main-menu-nav.show {
+      display: block;
+      visibility: visible;
+      position: absolute;
+      top: 90px;
+      width: 100%;
+      left: 0;
+      background: $primary;
+    }
+    .main-menu-toggle {
+      display: flex;
+      margin: 1em 0;
+      justify-content: flex-end;
+      background: transparent;
+      border: 1px solid black;
+      color: black;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      &:hover,
+      &:focus {
+        color: white;
+        background-color: $accent;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+  @media only screen and (min-width: 720px) {
+    .main-menu-toggle {
+      display: none;
+      visibility: hidden;
+    }
+  }
 }
