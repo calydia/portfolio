@@ -29,7 +29,7 @@
         "drupal/core": "^8.8.0",
         "drupal/devel": "^2.1",
         "drupal/editor_advanced_link": "^1.4",
-        "drupal/linkit": "^5.0",
+        "drupal/linkit": "^6",
         "drupal/metatag": "^1.10",
         "drupal/paragraphs": "^1.9",
         "drupal/pathauto": "^1.4",
