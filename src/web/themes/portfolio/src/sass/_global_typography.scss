@@ -16,6 +16,7 @@ a {
   text-decoration: none;
   &:hover {
     color: $accent;
+    text-decoration: underline;
   }
 }
 
