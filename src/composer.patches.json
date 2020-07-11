@@ -1,3 +1,7 @@
 {
-  "patches": {}
+  "patches": {
+    "drupal/build_hooks": {
+      "Drupal 9 compatibility": "https://www.drupal.org/files/issues/2020-06-22/3153199-5.patch"
+    }
+  }
 }
