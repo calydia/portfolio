@@ -37,7 +37,7 @@
         "drupal/upgrade_status": "^2.7",
         "drupal/view_unpublished": "^1.0@alpha",
         "drupal/xmlsitemap": "^1.0@alpha",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^10.0.0",
         "justinrainbow/json-schema": "^5.2",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
