@@ -1,8 +1,3 @@
 {
-  "patches": {
-    "drupal/build_hooks": {
-      "Drupal 9 compatibility": "https://www.drupal.org/files/issues/2020-06-22/3153199-5.patch",
-      "My patch for remaining Drupal 9 problems": "applied_patches/build_hooks/drupal9-mypatch.patch"
-    }
-  }
+  "patches": {}
 }
