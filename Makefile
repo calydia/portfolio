@@ -20,7 +20,7 @@ endif
 up:
 	@echo "Starting up containers for $(PROJECT_NAME)..."
 	docker-compose pull || true
-	docker-compose up -d --remove-orphans
+	docker-compose up -d --remove-orphans --build
 
 ## down	:	Delete containers.
 down:

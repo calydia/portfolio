@@ -23,10 +23,7 @@
         "drupal/admin_toolbar": "*",
         "drupal/backup_migrate": "^5.0",
         "drupal/block_class": "*",
-        "drupal/build_hooks": "*",
-        "drupal/config_ignore": "*",
-        "drupal/console": "^1.0.2",
-        "drupal/core": "^8.8.0",
+        "drupal/core": "^9.0.0",
         "drupal/devel": "^4.0",
         "drupal/editor_advanced_link": "^1.4",
         "drupal/linkit": "^6",
@@ -37,15 +34,15 @@
         "drupal/upgrade_status": "^2.7",
         "drupal/view_unpublished": "^1.0@alpha",
         "drupal/xmlsitemap": "^1.0@alpha",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^10.0.0",
+        "justinrainbow/json-schema": "^5.2",
+        "symfony/routing": "^4.4",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
-    "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.7.0"
-    },
+    "require-dev": {},
     "conflict": {
         "drupal/drupal": "*"
     },

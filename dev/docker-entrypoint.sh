@@ -9,7 +9,7 @@ fi
 
 if [ -n "${PGID-}" ]; then
   groupmod -g "${PGID}" "${PHP_FPM_USER}"
-  chown "${PHP_FPM_USER}":"${PHP_FPM_GROUP}" /home/"${PHP_FPM_USER}"
+  chown -R "${PHP_FPM_USER}":"${PHP_FPM_GROUP}" /home/"${PHP_FPM_USER}"
   chown -R "${PHP_FPM_USER}":"${PHP_FPM_GROUP}" /var/www
 fi
 

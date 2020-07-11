@@ -22,8 +22,7 @@ function portfolio_preprocess_media(&$variables) {
       // Add the image url as a variable
       $media_entity = $variables['content']['field_media_image']['#items']->getEntity();
       $file_entity = $media_entity->field_media_image[0]->entity;
-      $variables['gallery_image_url'] = $file_entity->url();
-
+      $variables['gallery_image_url'] = $file_entity->createFileUrl();
     }
   }
 }

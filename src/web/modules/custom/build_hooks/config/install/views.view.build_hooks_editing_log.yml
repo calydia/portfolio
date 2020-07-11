@@ -1,4 +1,3 @@
-uuid: e9e48b19-444b-4068-b127-f856890bb18c
 langcode: en
 status: true
 dependencies:
@@ -6,11 +5,10 @@ dependencies:
     module:
       - build_hooks
   module:
-    - build_hooks
     - dblog
     - user
 _core:
-  default_config_hash: ef3nqVQ8p3uc6zBwSqRCC6OINPoDIfsta9KLQpHUsBg
+  default_config_hash: dTJtMY4Mm7I-HBpOcb0D7pGvA9Ca_uEpurQgErD2yrA
 id: build_hooks_editing_log
 label: 'Build hooks editing log'
 module: build_hooks
@@ -18,6 +16,7 @@ description: ''
 tag: ''
 base_table: watchdog
 base_field: wid
+core: 8.x
 display:
   default:
     display_plugin: default
@@ -214,8 +213,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
