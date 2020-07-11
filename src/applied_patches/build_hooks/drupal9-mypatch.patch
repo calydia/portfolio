@@ -1,0 +1,35 @@
+diff --git a/src/Form/FrontendEnvironmentDeleteForm.php b/src/Form/FrontendEnvironmentDeleteForm.php
+index bd61c5b..9b767de 100644
+--- a/src/Form/FrontendEnvironmentDeleteForm.php
++++ b/src/Form/FrontendEnvironmentDeleteForm.php
+@@ -38,7 +38,7 @@ class FrontendEnvironmentDeleteForm extends EntityConfirmFormBase {
+   public function submitForm(array &$form, FormStateInterface $form_state) {
+     $this->entity->delete();
+ 
+-    drupal_set_message(
++    Drupal\Core\Messenger\MessengerInterface::addMessage(
+       $this->t('content @type: deleted @label.',
+         [
+           '@type' => $this->entity->bundle(),
+diff --git a/src/Plugin/FrontendEnvironmentInterface.php b/src/Plugin/FrontendEnvironmentInterface.php
+index d0a759a..c9e9465 100644
+--- a/src/Plugin/FrontendEnvironmentInterface.php
++++ b/src/Plugin/FrontendEnvironmentInterface.php
+@@ -2,7 +2,7 @@
+ 
+ namespace Drupal\build_hooks\Plugin;
+ 
+-use Drupal\Component\Plugin\ConfigurablePluginInterface;
++use Drupal\Component\Plugin\ConfigurableInterface;
+ use Drupal\Component\Plugin\PluginInspectionInterface;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Plugin\PluginFormInterface;
+@@ -10,7 +10,7 @@ use Drupal\Core\Plugin\PluginFormInterface;
+ /**
+  * Defines an interface for Frontend environment plugins.
+  */
+-interface FrontendEnvironmentInterface extends ConfigurablePluginInterface, PluginFormInterface, PluginInspectionInterface {
++interface FrontendEnvironmentInterface extends ConfigurableInterface, PluginFormInterface, PluginInspectionInterface {
+ 
+   /**
+    * Get the info to trigger the hook based on the configuration of the plugin.
