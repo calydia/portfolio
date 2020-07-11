@@ -34,6 +34,7 @@ services:
       PHP_FPM_GROUP: wodby
       PUID: $PUID
       PGID: $PGID
+      CIRCLECI_API_KEY: $CIRCLECI_API_KEY
       COLUMNS: 80 # Set 80 columns for docker exec -it.
     ## Read instructions at https://wodby.com/stacks/drupal/docs/local/xdebug/
     #      PHP_XDEBUG: 1
