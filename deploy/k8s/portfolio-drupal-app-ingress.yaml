@@ -1,0 +1,24 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: portfolio-drupal-app-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    traefik.ingress.kubernetes.io/frontend-entry-points: http,https
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
+    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+spec:
+  tls:
+    - hosts:
+        - $(SITE_URL)
+      secretName: portfolio-drupal-tls
+  rules:
+    - host: $(SITE_URL)
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: portfolio-drupal-app-svc
+              servicePort: nginx

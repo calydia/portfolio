@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-drupal-phpmyadmin
+  labels:
+    app: portfolio-drupal-phpmyadmin
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: portfolio-drupal-phpmyadmin
+  template:
+    metadata:
+      labels:
+        app: portfolio-drupal-phpmyadmin
+    spec:
+      containers:
+        - name: phpmyadmin
+          image: phpmyadmin/phpmyadmin
+          ports:
+            - containerPort: 80
+          env:
+            - name: PMA_HOST
+              value: "portfolio-drupal-mariadb"
+            - name: PMA_PORT
+              value: "3306"
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: MYSQL_ROOT_PASSWORD

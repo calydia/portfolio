@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-drupal-mariadb
+spec:
+  selector:
+    matchLabels:
+      app: portfolio-drupal-mariadb
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: portfolio-drupal-mariadb
+    spec:
+      containers:
+        - image: mariadb:10
+          name: mariadb
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: MYSQL_DATABASE
+            - name: MYSQL_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: MYSQL_USER
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: MYSQL_PASSWORD
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: portfolio-drupal-mariadb-persistent-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: portfolio-drupal-mariadb-persistent-storage
+          persistentVolumeClaim:
+            claimName: portfolio-drupal-mariadb-pvc
