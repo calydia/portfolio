@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: circleci
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: circleci-deployer
+rules:
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  resourceNames: ["portfolio-drupal-app"]
+  verbs: ["get", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: circleci-rolebinding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: circleci-deployer
+subjects:
+- kind: ServiceAccount
+  name: circleci

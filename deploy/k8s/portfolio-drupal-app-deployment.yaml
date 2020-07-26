@@ -1,0 +1,161 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-drupal-app
+spec:
+  selector:
+    matchLabels:
+      app: portfolio-drupal-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: portfolio-drupal-app
+    spec:
+      containers:
+        - name: php-fpm
+          image: wodby/drupal-php:7.3
+          env:
+            - name: PHP_FPM_USER
+              value: "wodby"
+            - name: PHP_FPM_GROUP
+              value: "wodby"
+            - name: PHP_FPM_CLEAR_ENV
+              value: "no"
+            - name: COLUMNS
+              value: "80"
+            - name: CIRCLECI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: CIRCLECI_API_KEY
+            - name: SITE_HASH_SALT
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: SITE_HASH_SALT
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: MYSQL_PASSWORD
+            - name: SITE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: SITE_URL
+          resources:
+            limits:
+              cpu: 2000m
+            requests:
+              cpu: 10m
+          volumeMounts:
+            - name: portfolio-drupal-files
+              mountPath: /var/www/html/web/sites/default/files
+            - name: portfolio-drupal-settings-php-secret
+              mountPath: /var/www/html/web/sites/default/settings.php
+              subPath: settings.php
+            - name: portfolio-drupal-code
+              mountPath: "/var/www/html"
+        - name: nginx
+          image: wodby/nginx:1.16
+          env:
+            - name: NGINX_BACKEND_HOST
+              value: "localhost"
+            - name: NGINX_SERVER_ROOT
+              value: "/var/www/html/web"
+            - name: NGINX_VHOST_PRESET
+              value: "drupal8"
+          volumeMounts:
+            - name: portfolio-drupal-files
+              mountPath: /var/www/html/web/sites/default/files
+            - name: portfolio-drupal-code
+              mountPath: "/var/www/html"
+      initContainers:
+        - name: init-1
+          env:
+            - name: GIT_REPO_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: GIT_REPO_URL
+            - name: GIT_REPO_DIR
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: GIT_REPO_DIR
+            - name: GIT_REPO_BRANCH
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: GIT_REPO_BRANCH
+          resources:
+            limits:
+              cpu: 2000m
+            requests:
+              cpu: 10m
+          image: wodby/drupal-php:7.3
+          command: [ "/bin/bash", "-c", "--" ]
+          args:
+            - cd /var/www/html;
+              git clone ${GIT_REPO_URL};
+              cd ${GIT_REPO_DIR};
+              git checkout ${GIT_REPO_BRANCH};
+              cd /var/www/html/;
+              cp -r ${GIT_REPO_DIR}/src/* /var/www/html/;
+              rm -rf ${GIT_REPO_DIR};
+              composer install --no-dev --no-interaction;
+          volumeMounts:
+            - name: portfolio-drupal-code
+              mountPath: "/var/www/html"
+        - name: init-2
+          env:
+            - name: SITE_HASH_SALT
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: SITE_HASH_SALT
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: portfolio-drupal-secret
+                  key: MYSQL_PASSWORD
+            - name: SITE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: portfolio-drupal-configmap
+                  key: SITE_URL
+          resources:
+            limits:
+              cpu: 2000m
+            requests:
+              cpu: 10m
+          image: wodby/drupal-php:7.3
+          command: [ "/bin/bash", "-c", "--" ]
+          args:
+            - cd /var/www/html;
+              drush updb -y;
+              drush cim -y;
+              drush cr -y;
+          volumeMounts:
+            - name: portfolio-drupal-files
+              mountPath: /var/www/html/web/sites/default/files
+            - name: portfolio-drupal-settings-php-secret
+              mountPath: /var/www/html/web/sites/default/settings.php
+              subPath: settings.php
+            - name: portfolio-drupal-code
+              mountPath: "/var/www/html"
+      volumes:
+        - name: portfolio-drupal-files
+          persistentVolumeClaim:
+            claimName: portfolio-drupal-app-files-pvc
+        - name: portfolio-drupal-settings-php-secret
+          secret:
+            secretName: portfolio-drupal-secret
+        - name: portfolio-drupal-code
+          emptyDir: {}

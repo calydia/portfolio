@@ -1,0 +1,49 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: portfolio-drupal
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: portfolio-drupal-configmap
+    literals:
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - GIT_REPO_URL=https://github.com/your/repo.git
+      - GIT_REPO_DIR=portfolio
+      - GIT_REPO_BRANCH=master
+      - SITE_URL=site.url.here
+
+secretGenerator:
+  - name: portfolio-drupal-secret
+    type: Opaque
+    files:
+      - settings.php
+    literals:
+      - SITE_HASH_SALT=set_site_hash_salt_here
+      - MYSQL_ROOT_PASSWORD=set_password_here
+      - MYSQL_PASSWORD=set_password_here
+      - CIRCLECI_API_KEY=replace_circleci_user_api_key_here
+
+resources:
+  - portfolio-drupal-namespace.yaml
+  - portfolio-drupal-mariadb-deployment.yaml
+  - portfolio-drupal-mariadb-pma-deployment.yaml
+  - portfolio-drupal-mariadb-pvc.yaml
+  - portfolio-drupal-mariadb-svc.yaml
+  - portfolio-drupal-app-deployment.yaml
+  - portfolio-drupal-app-ingress.yaml
+  - portfolio-drupal-app-pvc.yaml
+  - portfolio-drupal-app-svc.yaml
+  - portfolio-drupal-circleci-sa.yaml
+
+vars:
+  - name: SITE_URL
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: portfolio-drupal-configmap
+    fieldref:
+      fieldpath: data.SITE_URL

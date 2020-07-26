@@ -4,3 +4,4 @@
 /db
 /mariadb-init
 /src/config/sync/build_hooks_circleci.circleCiConfig.yml
+deploy/k8s/kustomization.yaml
