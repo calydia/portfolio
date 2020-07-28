@@ -1,5 +1,16 @@
 @import "variables";
 
+.skip-link.visually-hidden.focusable:active,
+.skip-link.visually-hidden.focusable:focus {
+  background-color: $accent;
+  color: white;
+  left: 0;
+  padding: 0.5em 1em;
+  position: absolute !important;
+  top: 25px;
+  z-index: 2;
+}
+
 .header-main-menu {
   .menu {
     display: flex;
