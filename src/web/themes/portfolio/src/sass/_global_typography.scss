@@ -27,5 +27,6 @@ header {
 }
 
 a:focus {
-  border-bottom: 5px solid black;
+  border-bottom: 5px dashed black;
+  outline: none;
 }
