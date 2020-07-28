@@ -1,0 +1,19 @@
+uuid: 92660a3a-1379-4533-8791-ac2487c355f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_certificate
+field_name: field_certificate
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

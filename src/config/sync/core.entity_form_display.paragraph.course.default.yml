@@ -3,16 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.course.field_certificate
     - field.field.paragraph.course.field_educator
     - field.field.paragraph.course.field_month_year
     - field.field.paragraph.course.field_related_to_work_experience
     - field.field.paragraph.course.field_title
     - paragraphs.paragraphs_type.course
+  module:
+    - link
 id: paragraph.course.default
 targetEntityType: paragraph
 bundle: course
 mode: default
 content:
+  field_certificate:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_educator:
     weight: 2
     settings:

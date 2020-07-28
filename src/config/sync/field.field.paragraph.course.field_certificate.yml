@@ -1,0 +1,23 @@
+uuid: ffaa7cb7-4a9e-4d3a-aed0-cad6c2c00d20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_certificate
+    - paragraphs.paragraphs_type.course
+  module:
+    - link
+id: paragraph.course.field_certificate
+field_name: field_certificate
+entity_type: paragraph
+bundle: course
+label: Certificate
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link
