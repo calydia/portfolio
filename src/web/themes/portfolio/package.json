@@ -4,17 +4,17 @@
   "description": "Portfolio theme is a sub theme of the base theme Classy.",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-cli": "^2.2.0"
+    "gulp-cli": "^2.3.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^6.1.0",
-    "gulp-livereload": "^4.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^8.0.0"
