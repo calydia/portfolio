@@ -33,7 +33,7 @@
         "drupal/paragraphs": "*",
         "drupal/pathauto": "*",
         "drupal/scheduler": "*",
-        "drupal/upgrade_status": "^2.7",
+        "drupal/upgrade_status": "^3.0",
         "drupal/view_unpublished": "^1.0@alpha",
         "drupal/xmlsitemap": "^1.0@alpha",
         "drush/drush": "^10.0.0",
