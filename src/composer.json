@@ -24,7 +24,7 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/block_class": "*",
         "drupal/config_filter": "^2.0",
-        "drupal/config_ignore": "^2.2",
+        "drupal/config_ignore": "^3.0.0",
         "drupal/core": "^9.0.0",
         "drupal/devel": "^4.0",
         "drupal/editor_advanced_link": "^1.4",
