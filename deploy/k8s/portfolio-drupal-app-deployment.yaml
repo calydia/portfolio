@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: php-fpm
-          image: wodby/drupal-php:7.3
+          image: wodby/drupal-php:7.4
           env:
             - name: PHP_FPM_USER
               value: "wodby"
@@ -99,7 +99,7 @@ spec:
               cpu: 2000m
             requests:
               cpu: 10m
-          image: wodby/drupal-php:7.3
+          image: wodby/drupal-php:7.4
           command: [ "/bin/bash", "-c", "--" ]
           args:
             - cd /var/www/html;
@@ -135,7 +135,7 @@ spec:
               cpu: 2000m
             requests:
               cpu: 10m
-          image: wodby/drupal-php:7.3
+          image: wodby/drupal-php:7.4
           command: [ "/bin/bash", "-c", "--" ]
           args:
             - cd /var/www/html;
