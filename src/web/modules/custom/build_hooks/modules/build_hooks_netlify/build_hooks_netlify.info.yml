@@ -1,7 +1,0 @@
-name: 'Build Hooks for Netlify'
-type: module
-description: 'Supports creating frontend environments connected to Netlify.'
-core_version_requirement: ^8 || ^9
-package: 'Build hooks'
-dependencies:
-  - drupal:build_hooks
