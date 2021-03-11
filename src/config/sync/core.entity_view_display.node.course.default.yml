@@ -1,0 +1,72 @@
+uuid: d6193eb4-d626-4e2b-b404-40ac20c96d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.course.field_certificate
+    - field.field.node.course.field_date
+    - field.field.node.course.field_educator
+    - field.field.node.course.field_related_to_work_experience
+    - field.field.node.course.field_year
+    - node.type.course
+  module:
+    - datetime
+    - link
+    - user
+id: node.course.default
+targetEntityType: node
+bundle: course
+mode: default
+content:
+  field_certificate:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: year_and_month_slash
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_educator:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_related_to_work_experience:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_year:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
