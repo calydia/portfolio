@@ -9,7 +9,7 @@ _core:
 id: portfolio_local_actions
 theme: portfolio
 region: content
-weight: -20
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

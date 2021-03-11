@@ -1,0 +1,36 @@
+uuid: 40e3bc0b-3346-4d17-99f8-5197b60cefef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.courses
+  module:
+    - block_class
+    - node
+    - views
+  theme:
+    - portfolio
+third_party_settings:
+  block_class:
+    classes: block--courses
+id: views_block__courses_block_courses
+theme: portfolio
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:courses-block_courses'
+settings:
+  id: 'views_block:courses-block_courses'
+  label: Courses
+  provider: views
+  label_display: visible
+  views_label: Courses
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      education: education
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

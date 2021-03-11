@@ -30,3 +30,50 @@
     font-weight: bold;
   }
 }
+
+
+.block--courses {
+  h2 {
+    margin-top: 2em;
+  }
+  h3 {
+    margin-top: 1.5em;
+  }
+  .views-row {
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #46037e 0%, #9edcff 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    position: relative;
+  }
+  //odd borders
+  .views-row:nth-child(odd) {
+    border-right: 3px solid;
+
+    &:before {
+      left: 100%;
+      margin-left: -20px;
+    }
+  }
+  //even borders
+  .views-row:nth-child(even) {
+    border-left: 3px solid;
+
+    &:before {
+      right: 100%;
+      margin-right: -20px;
+    }
+  }
+
+  .views-field-title {
+    @include fontSize(18px);
+    font-weight: bold;
+  }
+  .views-label {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+}
