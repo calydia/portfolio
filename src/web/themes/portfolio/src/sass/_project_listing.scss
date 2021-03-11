@@ -55,5 +55,7 @@
   &:focus {
     background-color: $accent;
     border-bottom: none;
+    outline: 5px dashed black;
+    outline-offset: 5px;
   }
 }
