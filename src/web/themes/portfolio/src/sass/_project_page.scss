@@ -30,7 +30,8 @@
       border: 3px solid $secondary;
     }
     &:focus {
-      border: 3px solid black;
+      outline: 5px dashed black;
+      outline-offset: -5px;
     }
   }
   img {
