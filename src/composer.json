@@ -26,6 +26,7 @@
         "drupal/core": "^9.1.0",
         "drupal/devel": "^4.0",
         "drupal/editor_advanced_link": "^1.4",
+        "drupal/graphql": "^4.0",
         "drupal/linkit": "^6",
         "drupal/metatag": "*",
         "drupal/paragraphs": "*",
