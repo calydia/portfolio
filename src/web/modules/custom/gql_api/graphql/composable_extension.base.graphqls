@@ -1,0 +1,120 @@
+type Mutation
+
+scalar Violation
+
+type Project {
+  id: Int!
+  title: String!
+  year: Int
+  published: Boolean
+  content: String
+  contentSummary: String
+  listingImage: String
+  projectImages: [ProjectImage]
+  slug: String
+  metaDescription: String
+  roles: [Role]
+  technologies: [Technology]
+  projectLink: [Link]
+  repoLinks: [Link]
+}
+
+type Link {
+  uri: String
+  title: String
+}
+
+type Role {
+  id: Int
+  name: String
+}
+
+type Technology {
+  id: Int
+  name: String
+}
+
+type ProjectImage {
+  url: String
+}
+
+type Experience {
+  id: Int!
+  title: String!
+  startDate: String
+  endDate: String
+  published: Boolean
+  content: String
+  contentSummary: String
+  companyLink: [Link]
+  slug: String
+  metaDescription: String
+}
+
+type Education {
+  id: Int!
+  title: String!
+  content: String
+  metaDescription: String
+  schoolInfo: String
+}
+
+
+type Course {
+  id: Int!
+  title: String!
+  certificateLink: [Link]
+  date: String
+  educator: String
+  relatedExperienceName: String
+  relatedExperienceSlug: String
+  year: Int
+  metaDescription: String
+}
+
+type Page {
+  id: Int!
+  title: String!
+  content: String
+  slug: String
+  metaDescription: String
+}
+
+type ProjectResponse implements Response {
+  errors: [Violation]
+  project: Project
+}
+
+type CourseResponse implements Response {
+  errors: [Violation]
+  listing: Course
+}
+
+type ExperienceResponse implements Response {
+  errors: [Violation]
+  listing: Experience
+}
+
+interface Response {
+  errors: [Violation]
+}
+
+input ProjectInput {
+  title: String!
+  description: String
+}
+
+type ProjectConnection {
+  total: Int!
+  items: [Project!]
+}
+
+type CourseConnection {
+  total: Int!
+  items: [Course!]
+}
+
+type ExperienceConnection {
+  total: Int!
+  items: [Experience!]
+}
