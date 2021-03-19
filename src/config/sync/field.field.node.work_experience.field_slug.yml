@@ -1,0 +1,19 @@
+uuid: d72557ec-2d85-4306-8450-68527f025f5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slug
+    - node.type.work_experience
+id: node.work_experience.field_slug
+field_name: field_slug
+entity_type: node
+bundle: work_experience
+label: Slug
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

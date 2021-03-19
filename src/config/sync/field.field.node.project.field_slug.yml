@@ -1,0 +1,19 @@
+uuid: c3df949b-2467-4e40-b4f3-f4d07b5eea88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slug
+    - node.type.project
+id: node.project.field_slug
+field_name: field_slug
+entity_type: node
+bundle: project
+label: Slug
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

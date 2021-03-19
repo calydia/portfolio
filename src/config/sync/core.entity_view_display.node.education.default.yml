@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.education.field_courses
     - field.field.node.education.field_meta_tags
     - field.field.node.education.field_school
+    - field.field.node.education.field_school_info
     - node.type.education
   module:
     - entity_reference_revisions
@@ -21,13 +22,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_courses:
     type: entity_reference_revisions_entity_view
-    weight: 103
+    weight: 3
     label: above
     settings:
       view_mode: default
@@ -35,7 +36,7 @@ content:
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 104
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -43,7 +44,7 @@ content:
     region: content
   field_school:
     type: entity_reference_revisions_entity_view
-    weight: 102
+    weight: 2
     label: hidden
     settings:
       view_mode: default
@@ -51,8 +52,9 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_school_info: true
