@@ -22,7 +22,7 @@
         "drupal/admin_toolbar": "*",
         "drupal/backup_migrate": "^5.0",
         "drupal/block_class": "*",
-        "drupal/build_hooks": "^2.5",
+        "drupal/build_hooks": "^3",
         "drupal/core": "^9.1.0",
         "drupal/devel": "^4.0",
         "drupal/editor_advanced_link": "^1.4",

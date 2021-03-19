@@ -1,0 +1,19 @@
+uuid: 7980d902-0749-47c8-a45e-4be45ae10eb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_description
+    - node.type.work_experience
+id: node.work_experience.field_meta_description
+field_name: field_meta_description
+entity_type: node
+bundle: work_experience
+label: 'Meta description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

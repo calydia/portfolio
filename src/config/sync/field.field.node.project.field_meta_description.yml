@@ -1,0 +1,19 @@
+uuid: 9ee0331d-063e-4f33-bee1-f47a551cf6c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_description
+    - node.type.project
+id: node.project.field_meta_description
+field_name: field_meta_description
+entity_type: node
+bundle: project
+label: 'Meta description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

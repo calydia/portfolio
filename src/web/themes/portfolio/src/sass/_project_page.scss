@@ -40,7 +40,7 @@
 }
 
 .field--name-field-link-to-project a {
-  background: $accent;
+  background: $link;
   border-radius: 2em;
   color: white;
   display: inline-block;
@@ -50,13 +50,13 @@
   transition: background-color 0.3s ease;
   &:hover {
     color: white;
-    background-color: $secondary;
+    background-color: $linkHover;
     transition: background-color 0.3s ease;
   }
   &:focus {
-    color: white;
-    background-color: $secondary;
+    background-color: $linkHover;
     border-bottom: none;
-    transition: background-color 0.3s ease;
+    outline: 5px dashed black;
+    outline-offset: 5px;
   }
 }

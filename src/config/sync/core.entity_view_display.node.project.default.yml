@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.project.body
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
+    - field.field.node.project.field_meta_description
     - field.field.node.project.field_meta_tags
     - field.field.node.project.field_project_image
     - field.field.node.project.field_project_image_listing
     - field.field.node.project.field_related_to_work_experience
     - field.field.node.project.field_roles_in_the_project
+    - field.field.node.project.field_slug
     - field.field.node.project.field_technologies
     - field.field.node.project.field_year
     - node.type.project
@@ -110,4 +112,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_meta_description: true
   field_project_image_listing: true
+  field_slug: true

@@ -2,7 +2,7 @@
 
 .skip-link.visually-hidden.focusable:active,
 .skip-link.visually-hidden.focusable:focus {
-  background-color: $accent;
+  background-color: $link;
   color: white;
   left: 0;
   padding: 0.5em 1em;
@@ -27,16 +27,19 @@
   }
   a {
     color: black;
+    font-weight: 500;
     text-transform: uppercase;
     &:hover {
-      color: $dark;
+      color: $linkHover;
       text-decoration: underline;
     }
   }
   ul.menu a.is-active {
-    color: $secondary;
+    color: $linkHover;
+    text-decoration: underline;
     &:hover {
-      color: $dark;
+      color: $linkHover;
+      text-decoration: none;
     }
   }
   .menu-item--collapsed {
@@ -55,7 +58,7 @@
       top: 90px;
       width: 100%;
       left: 0;
-      background: $primary;
+      background: $headerGradient;
     }
     .main-menu-toggle {
       display: flex;
@@ -73,6 +76,10 @@
         color: white;
         background-color: $accent;
         transition: background-color 0.3s ease;
+      }
+      &:focus {
+        outline: 5px dashed black;
+        outline-offset: 5px;
       }
     }
   }

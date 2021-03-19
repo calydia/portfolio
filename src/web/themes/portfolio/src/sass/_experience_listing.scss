@@ -3,7 +3,7 @@
 .block-views-blockwork-experience-block-work-experience {
   .views-row {
     border-top: 3px solid;
-    border-image: linear-gradient(to right, #46037e 0%, #9edcff 100%);
+    border-image: $otherGradient;
     border-image-slice: 1;
     border-width: 3px;
     margin: 0;

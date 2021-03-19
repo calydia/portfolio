@@ -1,0 +1,21 @@
+uuid: 1113ad7a-75b0-45d6-85ce-221de18d3524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_info
+    - node.type.education
+  module:
+    - text
+id: node.education.field_school_info
+field_name: field_school_info
+entity_type: node
+bundle: education
+label: 'School info'
+description: 'Info about the schools. This is currently only used in Gatsby.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

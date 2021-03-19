@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.work_experience.body
     - field.field.node.work_experience.field_company
     - field.field.node.work_experience.field_end_date
+    - field.field.node.work_experience.field_meta_description
     - field.field.node.work_experience.field_meta_tags
+    - field.field.node.work_experience.field_slug
     - field.field.node.work_experience.field_start_date
     - node.type.work_experience
   module:
@@ -59,5 +61,7 @@ content:
       format_type: year_and_month_slash
     third_party_settings: {  }
 hidden:
+  field_meta_description: true
   field_meta_tags: true
+  field_slug: true
   links: true

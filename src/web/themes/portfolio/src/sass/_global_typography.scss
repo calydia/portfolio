@@ -2,7 +2,8 @@
 
 body {
   font-family: "Quicksand", sans-serif;
-  line-height: 1.5em;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 h1,
@@ -11,12 +12,16 @@ h3 {
 }
 
 a {
-  color: $secondary;
+  color: $link;
   font-weight: bold;
   text-decoration: none;
   &:hover {
-    color: $accent;
+    color: $linkHover;
     text-decoration: underline;
+  }
+  &:focus {
+    border-bottom: 5px dashed black;
+    outline: none;
   }
 }
 
@@ -24,9 +29,4 @@ header {
   a {
     font-weight: normal;
   }
-}
-
-a:focus {
-  border-bottom: 5px dashed black;
-  outline: none;
 }
