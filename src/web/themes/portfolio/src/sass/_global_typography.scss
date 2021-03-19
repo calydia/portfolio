@@ -11,12 +11,16 @@ h3 {
 }
 
 a {
-  color: $secondary;
+  color: $link;
   font-weight: bold;
   text-decoration: none;
   &:hover {
-    color: $accent;
+    color: $linkHover;
     text-decoration: underline;
+  }
+  &:focus {
+    border-bottom: 5px dashed black;
+    outline: none;
   }
 }
 
@@ -24,9 +28,4 @@ header {
   a {
     font-weight: normal;
   }
-}
-
-a:focus {
-  border-bottom: 5px dashed black;
-  outline: none;
 }

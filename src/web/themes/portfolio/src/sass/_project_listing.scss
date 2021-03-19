@@ -39,7 +39,7 @@
   }
 }
 .read-more a {
-  background: $secondary;
+  background: $link;
   border-radius: 2em;
   color: white;
   display: inline-block;
@@ -49,11 +49,11 @@
   transition: background-color 0.3s ease;
   &:hover {
     color: white;
-    background-color: $accent;
+    background-color: $linkHover;
     transition: background-color 0.3s ease;
   }
   &:focus {
-    background-color: $accent;
+    background-color: $linkHover;
     border-bottom: none;
     outline: 5px dashed black;
     outline-offset: 5px;
