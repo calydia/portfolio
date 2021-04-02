@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
+    - field.field.node.project.field_decorative_image
+    - field.field.node.project.field_decorative_image_credits
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
     - field.field.node.project.field_meta_description
@@ -44,6 +46,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_decorative_image:
+    type: media_library_widget
+    weight: 34
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_decorative_image_credits:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_link_to_project:
     weight: 9
     settings:
