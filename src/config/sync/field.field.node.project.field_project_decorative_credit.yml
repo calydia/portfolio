@@ -1,14 +1,14 @@
-uuid: 0791e061-5e93-4143-9cfa-c87026b922c4
+uuid: ef431d2f-c46c-4317-b488-cb82d618adef
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_decorative_image_credits
+    - field.storage.node.field_project_decorative_credit
     - node.type.project
   module:
     - text
-id: node.project.field_decorative_image_credits
-field_name: field_decorative_image_credits
+id: node.project.field_project_decorative_credit
+field_name: field_project_decorative_credit
 entity_type: node
 bundle: project
 label: 'Decorative image credits'
@@ -18,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text
+field_type: text_long
