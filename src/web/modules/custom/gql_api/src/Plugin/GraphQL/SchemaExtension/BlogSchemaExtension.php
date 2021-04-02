@@ -158,7 +158,7 @@ class BlogSchemaExtension extends SdlSchemaExtensionPluginBase {
       $builder->produce('property_path')
         ->map('type', $builder->fromValue('entity:node'))
         ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_decorative_image_credits.value'))
+        ->map('path', $builder->fromValue('field_project_decorative_credit.value'))
     );
 
     $registry->addFieldResolver('Project', 'year',

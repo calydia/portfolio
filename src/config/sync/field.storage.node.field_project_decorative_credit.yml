@@ -1,16 +1,15 @@
-uuid: a709f016-e2dc-41bd-a349-ccd840612102
+uuid: 4e0dfa91-3573-450b-b81c-a3d3f6a27566
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
-id: node.field_decorative_image_credits
-field_name: field_decorative_image_credits
+id: node.field_project_decorative_credit
+field_name: field_project_decorative_credit
 entity_type: node
-type: text
-settings:
-  max_length: 255
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1
