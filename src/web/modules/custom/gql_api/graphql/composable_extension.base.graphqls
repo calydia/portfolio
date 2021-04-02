@@ -17,6 +17,8 @@ type Project {
   technologies: [Technology]
   projectLink: [Link]
   repoLinks: [Link]
+  decorativeImage: String
+  decorativeImageCredits: String
 }
 
 type Link {
