@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
+    - field.field.node.project.field_decorative_image
+    - field.field.node.project.field_decorative_image_credits
     - field.field.node.project.field_link_to_project
     - field.field.node.project.field_link_to_repository
     - field.field.node.project.field_meta_description
@@ -112,6 +114,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_decorative_image: true
+  field_decorative_image_credits: true
   field_meta_description: true
   field_project_image_listing: true
   field_slug: true
