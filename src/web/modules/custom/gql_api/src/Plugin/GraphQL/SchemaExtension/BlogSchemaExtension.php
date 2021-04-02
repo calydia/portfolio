@@ -272,6 +272,38 @@ class BlogSchemaExtension extends SdlSchemaExtensionPluginBase {
       )
     );
 
+    $registry->addFieldResolver('ProjectImage', 'thumb',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_media_image.entity')),
+          $builder->produce('image_derivative')
+          ->map('entity', $builder->fromParent())
+          ->map('style', $builder->fromValue('project_listing_image')),
+          $builder->produce('image_style_url')
+          ->map('derivative', $builder->fromParent())
+      )
+    );
+
+    $registry->addFieldResolver('ProjectImage', 'alt',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_media_image.alt')),
+      )
+    );
+
+    $registry->addFieldResolver('ProjectImage', 'title',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_media_image.title')),
+      )
+    );
+
     $registry->addFieldResolver('Project', 'projectLink',
       $builder->produce('property_path')
         ->map('type', $builder->fromValue('entity:node'))

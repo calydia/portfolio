@@ -38,6 +38,9 @@ type Technology {
 
 type ProjectImage {
   url: String
+  thumb: String
+  alt: String
+  title: String
 }
 
 type Experience {
