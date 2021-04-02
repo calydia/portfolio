@@ -154,6 +154,13 @@ class BlogSchemaExtension extends SdlSchemaExtensionPluginBase {
         ->map('path', $builder->fromValue('body.summary'))
     );
 
+    $registry->addFieldResolver('Project', 'decorativeImageCredits',
+      $builder->produce('property_path')
+        ->map('type', $builder->fromValue('entity:node'))
+        ->map('value', $builder->fromParent())
+        ->map('path', $builder->fromValue('field_decorative_image_credits.value'))
+    );
+
     $registry->addFieldResolver('Project', 'year',
       $builder->produce('property_path')
         ->map('type', $builder->fromValue('entity:node'))
@@ -224,6 +231,21 @@ class BlogSchemaExtension extends SdlSchemaExtensionPluginBase {
           ->map('type', $builder->fromValue('entity:node'))
           ->map('value', $builder->fromParent())
           ->map('path', $builder->fromValue('field_project_image_listing.entity')),
+        $builder->produce('property_path')
+        ->map('type', $builder->fromValue('entity:media'))
+        ->map('value', $builder->fromParent())
+        ->map('path', $builder->fromValue('field_media_image.entity')),
+        $builder->produce("image_url")
+          ->map('entity',$builder->fromParent())
+      )
+    );
+
+    $registry->addFieldResolver('Project', 'decorativeImage',
+      $builder->compose(
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_decorative_image.entity')),
         $builder->produce('property_path')
         ->map('type', $builder->fromValue('entity:media'))
         ->map('value', $builder->fromParent())
