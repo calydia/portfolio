@@ -1,0 +1,22 @@
+uuid: 2075ebbe-39c7-4837-bf8e-f28a6fcdf459
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.technologies.field_tech_url
+    - taxonomy.vocabulary.technologies
+id: taxonomy_term.technologies.default
+targetEntityType: taxonomy_term
+bundle: technologies
+mode: default
+content:
+  field_tech_url:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true
