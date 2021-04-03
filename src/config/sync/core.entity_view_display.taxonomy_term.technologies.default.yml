@@ -5,26 +5,18 @@ dependencies:
   config:
     - field.field.taxonomy_term.technologies.field_tech_url
     - taxonomy.vocabulary.technologies
-  module:
-    - text
 id: taxonomy_term.technologies.default
 targetEntityType: taxonomy_term
 bundle: technologies
 mode: default
 content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_tech_url:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  description: true
