@@ -5,65 +5,115 @@
   flex-flow: row wrap;
   margin-left: 0;
   padding-left: 0;
-  .logo-list--item {
+  .logo-list--item a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50px auto;
     content: '';
     display: block;
-    height: 50px;
+    height: 70px;
     margin: 0.5em 0.7em;
-    width: 50px;
+    text-indent: -9999px;
+    transition: background-size 0.2s ease-in-out;
+    width: 70px;
   }
 
-  .logo--drupal {
+  .logo--drupal a {
     background-image: url('../images/logos/drupal.svg');
     background-size: 60px auto;
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
+    &:hover {
+      background-size: 70px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--php {
+  .logo--php a {
     background-image: url('../images/logos/php.svg');
+    &:hover {
+      background-size: 60px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--javascript {
+  .logo--javascript a {
     background-image: url('../images/logos/javascript.svg');
+    &:hover {
+      background-size: 60px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--html5 {
+  .logo--html5 a {
     background-image: url('../images/logos/html5.svg');
     background-size: auto 50px;
+    &:hover {
+      background-size: auto 60px;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--css3 {
+  .logo--css3 a {
     background-image: url('../images/logos/css3.svg');
+    &:hover {
+      background-size: 60px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--sass {
+  .logo--sass a {
     background-image: url('../images/logos/sass.svg');
+    &:hover {
+      background-size: 60px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--react {
+  .logo--react a {
     background-image: url('../images/logos/react.svg');
+    &:hover {
+      background-size: 60px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--graphql {
+  .logo--graphql a {
     background-image: url('../images/logos/graphql.svg');
     background-size: auto 50px;
+    &:hover {
+      background-size: auto 60px;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--gatsby {
+  .logo--gatsby a {
     background-image: url('../images/logos/gatsby.svg');
+    &:hover {
+      background-size: 60px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--next {
+  .logo--next a {
     background-image: url('../images/logos/nextjs.svg');
     background-size: 60px auto;
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
+    &:hover {
+      background-size: 70px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--vscode {
+  .logo--vscode a {
     background-image: url('../images/logos/vscode.svg');
     background-size: 40px auto;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+    &:hover {
+      background-size: 50px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
-  .logo--git {
+  .logo--git a {
     background-image: url('../images/logos/git.svg');
     background-size: 40px auto;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
+    &:hover {
+      background-size: 50px auto;
+      transition: background-size 0.2s ease-in-out;
+    }
   }
 }
