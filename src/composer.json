@@ -96,5 +96,8 @@
         },
         "enable-patching": true,
         "patches-file": "composer.patches.json"
+    },
+    "require-dev": {
+        "kint-php/kint": "^3.3"
     }
 }
