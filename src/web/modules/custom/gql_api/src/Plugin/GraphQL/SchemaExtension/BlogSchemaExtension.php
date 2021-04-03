@@ -225,6 +225,13 @@ class BlogSchemaExtension extends SdlSchemaExtensionPluginBase {
         ->map('entity', $builder->fromParent())
     );
 
+    $registry->addFieldResolver('Technology', 'url',
+      $builder->produce('property_path')
+      ->map('type', $builder->fromValue('entity:taxonomy_term'))
+      ->map('value', $builder->fromParent())
+      ->map('path', $builder->fromValue('field_tech_url.value')),
+    );
+
     $registry->addFieldResolver('Project', 'listingImage',
       $builder->compose(
         $builder->produce('property_path')

@@ -34,6 +34,7 @@ type Role {
 type Technology {
   id: Int
   name: String
+  url: String
 }
 
 type ProjectImage {
