@@ -287,7 +287,7 @@ class BlogSchemaExtension extends SdlSchemaExtensionPluginBase {
           ->map('path', $builder->fromValue('field_media_image.entity')),
           $builder->produce('image_derivative')
           ->map('entity', $builder->fromParent())
-          ->map('style', $builder->fromValue('project_listing_image')),
+          ->map('style', $builder->fromValue('gatsby_gallery_image')),
           $builder->produce('image_style_url')
           ->map('derivative', $builder->fromParent())
       )
