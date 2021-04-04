@@ -15,8 +15,8 @@ settings:
   provider: build_hooks_circleci
   token: a3e517d60db11f76e09476ebffa91600cddef8bf
   type: branch
-  project: calydia/portfolio-gatsby-2.0
-  reference: main
+  project: calydia/portfolio-gatsby
+  reference: master
   parameters:
     -
       name: run_workflow_build_and_deploy
