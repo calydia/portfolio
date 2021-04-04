@@ -50,20 +50,32 @@ spec:
                   name: portfolio-drupal-configmap
                   key: SITE_URL
           resources:
+            requests:
+              cpu: 100m
+              memory: 100M
             limits:
               cpu: 2000m
-            requests:
-              cpu: 10m
+              memory: 4000M
           volumeMounts:
             - name: portfolio-drupal-files
               mountPath: /var/www/html/web/sites/default/files
-            - name: portfolio-drupal-settings-php-secret
+            - name: portfolio-drupal-secret
               mountPath: /var/www/html/web/sites/default/settings.php
               subPath: settings.php
             - name: portfolio-drupal-code
               mountPath: "/var/www/html"
+            - name:  portfolio-drupal-secret
+              mountPath: /var/www/html/config/sync/build_hooks.frontend_environment.circle_ci_gatsby.yml
+              subPath: build_hooks.frontend_environment.circle_ci_gatsby.yml
         - name: nginx
           image: wodby/nginx:1.16
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100M
+            limits:
+              cpu: 2000m
+              memory: 4000M
           env:
             - name: NGINX_BACKEND_HOST
               value: "localhost"
@@ -76,6 +88,9 @@ spec:
               mountPath: /var/www/html/web/sites/default/files
             - name: portfolio-drupal-code
               mountPath: "/var/www/html"
+            - name:  portfolio-drupal-secret
+              mountPath: /var/www/html/config/sync/build_hooks.frontend_environment.circle_ci_gatsby.yml
+              subPath: build_hooks.frontend_environment.circle_ci_gatsby.yml
       initContainers:
         - name: init-1
           env:
@@ -145,16 +160,19 @@ spec:
           volumeMounts:
             - name: portfolio-drupal-files
               mountPath: /var/www/html/web/sites/default/files
-            - name: portfolio-drupal-settings-php-secret
+            - name: portfolio-drupal-secret
               mountPath: /var/www/html/web/sites/default/settings.php
               subPath: settings.php
             - name: portfolio-drupal-code
               mountPath: "/var/www/html"
+            - name:  portfolio-drupal-secret
+              mountPath: /var/www/html/config/sync/build_hooks.frontend_environment.circle_ci_gatsby.yml
+              subPath: build_hooks.frontend_environment.circle_ci_gatsby.yml
       volumes:
         - name: portfolio-drupal-files
           persistentVolumeClaim:
             claimName: portfolio-drupal-app-files-pvc
-        - name: portfolio-drupal-settings-php-secret
+        - name: portfolio-drupal-secret
           secret:
             secretName: portfolio-drupal-secret
         - name: portfolio-drupal-code

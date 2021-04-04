@@ -1,0 +1,26 @@
+uuid: 2bad1337-dead-babe-b2ea-b37c3c869420
+langcode: en
+status: true
+dependencies:
+  module:
+    - build_hooks_circleci
+id: circle_ci_gatsby
+label: 'Circle CI - Gatsby'
+weight: 0
+provider: null
+plugin: circleciv2
+settings:
+  id: circleciv2
+  label: null
+  provider: build_hooks_circleci
+  token: 6839...circleci_personal_api_token
+  type: branch
+  project: <github username>/<gatsby git repo>
+  reference: main
+  parameters:
+    -
+      name: run_workflow_<workflow name>
+      type: boolean
+      value: false
+url: 'https://gatsby.site.url'
+deployment_strategy: entitysave

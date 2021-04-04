@@ -1,5 +1,5 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: portfolio-drupal-app-ingress
@@ -18,7 +18,10 @@ spec:
     - host: $(SITE_URL)
       http:
         paths:
-          - path: /
+          - pathType: Prefix
+            path: /
             backend:
-              serviceName: portfolio-drupal-app-svc
-              servicePort: nginx
+              service:
+                name: portfolio-drupal-app-svc
+                port:
+                  name: nginx
