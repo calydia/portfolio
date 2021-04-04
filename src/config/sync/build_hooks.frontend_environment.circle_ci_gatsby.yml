@@ -1,0 +1,26 @@
+uuid: b4613f7b-ec81-4247-b7ed-b8c7637e0df6
+langcode: en
+status: true
+dependencies:
+  module:
+    - build_hooks_circleci
+id: circle_ci_gatsby
+label: 'Circle CI - Gatsby'
+weight: 0
+provider: null
+plugin: circleciv2
+settings:
+  id: circleciv2
+  label: null
+  provider: build_hooks_circleci
+  token: a3e517d60db11f76e09476ebffa91600cddef8bf
+  type: branch
+  project: calydia/portfolio-gatsby-2.0
+  reference: main
+  parameters:
+    -
+      name: run_workflow_build_and_deploy
+      type: boolean
+      value: false
+url: 'https://sanna.ninja'
+deployment_strategy: entitysave
