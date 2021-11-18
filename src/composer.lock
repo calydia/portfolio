@@ -2148,16 +2148,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.2.8",
+            "version": "9.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "b40ae04a0a8a8a0952e77da7545de5ee8fa40757"
+                "reference": "2e2f015e881abccc32efcd264128e8a8444b2ec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/b40ae04a0a8a8a0952e77da7545de5ee8fa40757",
-                "reference": "b40ae04a0a8a8a0952e77da7545de5ee8fa40757",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2e2f015e881abccc32efcd264128e8a8444b2ec1",
+                "reference": "2e2f015e881abccc32efcd264128e8a8444b2ec1",
                 "shasum": ""
             },
             "require": {
@@ -2396,9 +2396,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.2.8"
+                "source": "https://github.com/drupal/core/tree/9.2.9"
             },
-            "time": "2021-11-03T17:25:16+00:00"
+            "time": "2021-11-17T21:05:58+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -8317,16 +8317,16 @@
         },
         {
             "name": "webonyx/graphql-php",
-            "version": "v14.11.0",
+            "version": "v14.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webonyx/graphql-php.git",
-                "reference": "d191b0c34365c025c6cd953b5a63aa62946c7060"
+                "reference": "adff4080c6b7fea71dc148d5a1da0257b79f2b2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/d191b0c34365c025c6cd953b5a63aa62946c7060",
-                "reference": "d191b0c34365c025c6cd953b5a63aa62946c7060",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/adff4080c6b7fea71dc148d5a1da0257b79f2b2a",
+                "reference": "adff4080c6b7fea71dc148d5a1da0257b79f2b2a",
                 "shasum": ""
             },
             "require": {
@@ -8371,7 +8371,7 @@
             ],
             "support": {
                 "issues": "https://github.com/webonyx/graphql-php/issues",
-                "source": "https://github.com/webonyx/graphql-php/tree/v14.11.0"
+                "source": "https://github.com/webonyx/graphql-php/tree/v14.11.2"
             },
             "funding": [
                 {
@@ -8379,7 +8379,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-10-29T13:08:08+00:00"
+            "time": "2021-11-18T09:43:58+00:00"
         },
         {
             "name": "zaporylie/composer-drupal-optimizations",
