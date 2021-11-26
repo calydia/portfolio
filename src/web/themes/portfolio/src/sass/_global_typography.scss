@@ -18,6 +18,7 @@ a {
   &:hover {
     color: $linkHover;
     text-decoration: underline;
+    text-decoration-thickness: 2px;
   }
   &:focus {
     border-bottom: 5px dashed black;
