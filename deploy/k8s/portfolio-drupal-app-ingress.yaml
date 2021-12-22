@@ -4,11 +4,11 @@ kind: Ingress
 metadata:
   name: portfolio-drupal-app-ingress
   annotations:
-    kubernetes.io/ingress.class: traefik
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    traefik.ingress.kubernetes.io/frontend-entry-points: http,https
-    traefik.ingress.kubernetes.io/redirect-entry-point: https
-    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/preserve-trailing-slash: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   tls:
     - hosts:
