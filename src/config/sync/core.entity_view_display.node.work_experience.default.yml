@@ -23,14 +23,14 @@ bundle: work_experience
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   field_company:
-    weight: 0
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -39,32 +39,32 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 0
     region: content
   field_end_date:
-    weight: 2
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: year_and_month_slash
     third_party_settings: {  }
-    type: datetime_default
+    weight: 2
     region: content
   field_meta_tags:
-    weight: 4
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 4
     region: content
   field_start_date:
-    weight: 1
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: year_and_month_slash
     third_party_settings: {  }
-    type: datetime_default
+    weight: 1
     region: content
 hidden:
   field_meta_description: true

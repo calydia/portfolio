@@ -29,14 +29,14 @@ bundle: project
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_link_to_project:
-    weight: 8
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -45,10 +45,10 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 8
     region: content
   field_link_to_repository:
-    weight: 6
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -57,62 +57,62 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 6
     region: content
   field_meta_tags:
-    weight: 9
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 9
     region: content
   field_project_image:
     type: entity_reference_entity_view
-    weight: 7
     label: above
     settings:
       view_mode: project_image
       link: false
     third_party_settings: {  }
+    weight: 7
     region: content
   field_related_to_work_experience:
-    weight: 3
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_roles_in_the_project:
-    weight: 4
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 4
     region: content
   field_technologies:
-    weight: 5
+    type: entity_reference_label
     label: above
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 5
     region: content
   field_year:
-    weight: 1
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 1
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_decorative_image: true
   field_meta_description: true

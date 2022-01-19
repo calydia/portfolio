@@ -4,13 +4,13 @@ status: true
 dependencies: {  }
 name: server
 label: Server
+endpoint: /graphql
+debug_flag: 0
 schema: composable
+caching: true
+batching: true
 schema_configuration:
   composable:
     extensions:
       composable_extension: composable_extension
 persisted_queries_settings: {  }
-endpoint: /graphql
-debug_flag: 0
-caching: true
-batching: true

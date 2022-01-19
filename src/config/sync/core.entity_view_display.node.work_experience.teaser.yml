@@ -24,16 +24,14 @@ mode: teaser
 content:
   body:
     type: text_summary_or_trimmed
-    weight: 3
-    region: content
     label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_company:
     type: link
-    weight: 2
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -42,24 +40,26 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_end_date:
     type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: year_and_month_slash
+    third_party_settings: {  }
     weight: 1
     region: content
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: year_and_month_slash
-    third_party_settings: {  }
   field_start_date:
     type: datetime_default
-    weight: 0
-    region: content
     label: hidden
     settings:
       timezone_override: ''
       format_type: year_and_month_slash
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_meta_description: true
   field_meta_tags: true
