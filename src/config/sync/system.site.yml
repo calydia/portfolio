@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+langcode: en
 uuid: 36fefac8-a053-4860-b81f-c0867115350e
 name: 'Sanna Mäkinen'
 mail: sanna.makinen@gmail.com
@@ -8,8 +11,5 @@ page:
   front: /node/14
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-_core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 mail_notification: ''
